@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maafin Leenka Ya 🥺💚</title>
+  <style>
+    :root{
+      --bg1:#fff3f7;
+      --bg2:#f3f7ff;
+      --ink:#232323;
+      --muted:#6b6b6b;
+      --card:#ffffffcc;
+      --stroke:#00000010;
+      --pink:#ff4d8d;
+      --purple:#7c4dff;
+      --mint:#2dd4bf;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-rounded, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--ink);
+      overflow-x:hidden;
+      background:
+        radial-gradient(1200px 600px at 10% 10%, #ffd1e6 0%, transparent 60%),
+        radial-gradient(1200px 600px at 90% 20%, #d8d2ff 0%, transparent 55%),
+        radial-gradient(900px 600px at 50% 100%, #c9fff6 0%, transparent 55%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+    }
+    .wrap{
+      min-height:100%;
+      display:grid;
+      place-items:center;
+      padding:32px 16px;
+    }
+    .card{
+      width:min(920px, 100%);
+      background:var(--card);
+      border:1px solid var(--stroke);
+      border-radius:28px;
+      box-shadow: 0 18px 45px #00000014;
+      padding:26px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hearts{
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      overflow:hidden;
+      border-radius:28px;
+    }
+    .heart{
+      position:absolute;
+      opacity:0;
+      animation: floatUp 2.8s ease-in forwards;
+      filter: drop-shadow(0 8px 10px #00000010);
+      user-select:none;
+    }
+    @keyframes floatUp{
+      0%{transform:translateY(20px) scale(.85); opacity:0}
+      15%{opacity:1}
+      100%{transform:translateY(-220px) scale(1.25); opacity:0}
+    }
+    canvas{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      pointer-events:none;
+    }
+
+    .top{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:10px;
+    }
+    .badge{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:10px 14px;
+      border-radius:999px;
+      background:#ffffffb8;
+      border:1px solid var(--stroke);
+      box-shadow: 0 10px 20px #00000008;
+      user-select:none;
+      font-weight:700;
+      color:#333;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background:linear-gradient(135deg, var(--pink), var(--purple));
+      box-shadow:0 0 0 6px #ff4d8d22;
+      animation:pulse 1.6s ease-in-out infinite;
+    }
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+
+    h1{
+      margin:4px 0 0;
+      font-size:clamp(26px, 3.3vw, 42px);
+      line-height:1.1;
+      letter-spacing:-0.02em;
+    }
+    .sub{
+      margin:8px 0 0;
+      color:var(--muted);
+      font-size:clamp(14px, 1.7vw, 16px);
+    }
+
+    .grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap:16px;
+    }
+    @media (max-width: 860px){ .grid{grid-template-columns:1fr} }
+
+    .panel{
+      border:1px solid var(--stroke);
+      border-radius:24px;
+      background:#fff;
+      padding:16px;
+      position:relative;
+      overflow:hidden;
+    }
+    .bubble{
+      position:absolute;
+      inset:auto auto -40px -40px;
+      width:140px;height:140px;
+      background: radial-gradient(circle at 30% 30%, #ff4d8d44, transparent 60%),
+                 radial-gradient(circle at 70% 70%, #7c4dff33, transparent 60%);
+      transform: rotate(18deg);
+      pointer-events:none;
+    }
+    .bubble.b2{
+      inset:-50px -50px auto auto;
+      width:160px;height:160px;
+      transform: rotate(-12deg);
+      background: radial-gradient(circle at 30% 30%, #2dd4bf33, transparent 60%),
+                 radial-gradient(circle at 70% 70%, #ff4d8d22, transparent 60%);
+    }
+
+    .cute{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+    }
+    .face{
+      width:92px;height:92px;
+      border-radius:24px;
+      background: linear-gradient(135deg, #fff, #fff0f6);
+      border:1px solid var(--stroke);
+      box-shadow: 0 14px 28px #00000012;
+      display:grid;
+      place-items:center;
+      position:relative;
+      flex:0 0 auto;
+    }
+    .eyes{display:flex; gap:16px; transform: translateY(-4px)}
+    .eye{
+      width:14px;height:18px;border-radius:999px;
+      background:#2b2b2b;
+      position:relative;
+      animation:blink 4.6s infinite;
+      transform-origin:center;
+    }
+    .eye:after{
+      content:"";
+      position:absolute; left:3px; top:4px;
+      width:5px;height:5px;border-radius:50%;
+      background:#fff;
+      opacity:.9;
+    }
+    @keyframes blink{0%,92%,100%{transform:scaleY(1)}94%,96%{transform:scaleY(.15)}}
+    .mouth{
+      width:26px;height:14px;
+      border:3px solid #2b2b2b;
+      border-top:0;
+      border-radius:0 0 14px 14px;
+      margin-top:10px;
+      transform: translateY(-2px);
+    }
+    .cheek{
+      position:absolute;
+      width:18px;height:12px;border-radius:999px;
+      background:#ff4d8d33;
+      top:52px;
+      filter: blur(.2px);
+    }
+    .cheek.left{left:14px}
+    .cheek.right{right:14px}
+
+    .msg{
+      margin:0;
+      font-size:16px;
+      line-height:1.55;
+      color:#2f2f2f;
+    }
+    .msg b{color:#111}
+    .hint{color:var(--muted); font-size:13px; margin:10px 0 0}
+
+    textarea{
+      width:100%;
+      margin-top:12px;
+      padding:12px 14px;
+      border-radius:16px;
+      border:1px solid var(--stroke);
+      font:inherit;
+      outline:none;
+      background:#fff;
+      box-shadow: inset 0 1px 0 #00000005;
+      min-height:150px;
+      resize:vertical;
+    }
+
+    .actions{
+      margin-top:14px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+      position:relative;
+      min-height:56px;
+    }
+    button{
+      border:0;
+      border-radius:16px;
+      padding:12px 16px;
+      font:inherit;
+      font-weight:800;
+      cursor:pointer;
+      transition: transform .08s ease, filter .2s ease;
+      user-select:none;
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      white-space:nowrap;
+    }
+    button:active{transform:translateY(1px) scale(.99)}
+    .primary{
+      background: linear-gradient(135deg, var(--pink), var(--purple));
+      color:white;
+      box-shadow: 0 14px 28px #ff4d8d2b;
+    }
+    .ghost{
+      background:#fff;
+      border:1px solid var(--stroke);
+      color:#222;
+    }
+    .small{
+      font-size:13px;
+      padding:10px 12px;
+      border-radius:14px;
+      font-weight:800;
+    }
+
+    .runaway{ position:absolute; left:0; top:0; }
+
+    .note{
+      margin-top:14px;
+      padding:12px 14px;
+      border-radius:18px;
+      background: #f7f7ff;
+      border:1px dashed #00000018;
+      color:#333;
+    }
+    .hidden{display:none}
+
+    .sticker{
+      border:1px solid var(--stroke);
+      border-radius:18px;
+      padding:12px 12px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      background:#fff;
+      margin-bottom:10px;
+    }
+    .ico{
+      width:38px;height:38px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background: linear-gradient(135deg, #fff0f6, #f3f0ff);
+      border:1px solid var(--stroke);
+      user-select:none;
+    }
+    .st-title{margin:0; font-weight:900}
+    .st-sub{margin:2px 0 0; color:var(--muted); font-size:13px}
+
+    .footer{
+      margin-top:10px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      color:var(--muted);
+      font-size:13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" id="card">
+      <div class="hearts" id="hearts"></div>
+      <canvas id="confetti"></canvas>
+
+      <div class="top">
+        <div class="badge"><span class="dot"></span><span id="badgeText">Mode: minta maaf lucu tapi serius 💚</span></div>
+        <div class="badge">📅 <span id="today"></span></div>
+      </div>
+
+      <h1>Maafin Leenka yaaa 🥺💚</h1>
+      <p class="sub">Leenka malu 👉👈 tapi pengen benerin, bukan diem-dieman.</p>
+
+      <div class="grid">
+        <div class="panel">
+          <div class="bubble"></div>
+          <div class="bubble b2"></div>
+
+          <div class="cute">
+            <div class="face" aria-hidden="true">
+              <div class="cheek left"></div>
+              <div class="cheek right"></div>
+              <div>
+                <div class="eyes">
+                  <div class="eye"></div>
+                  <div class="eye"></div>
+                </div>
+                <div class="mouth"></div>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <textarea id="messageBox"></textarea>
+
+          <div class="actions" id="actions">
+            <button class="primary" id="btnYes">✅ Maafin Leenka <span>✨</span></button>
+            <button class="ghost runaway" id="btnNo" type="button">🙅‍♀️ Ngga dulu</button>
+            <button class="ghost small" id="btnCopy" type="button">📋 Salin pesan</button>
+            <button class="ghost small" id="btnHearts" type="button">💖 Kirim hati</button>
+          </div>
+
+          <div class="note hidden" id="result">
+            <b>Yeay! 🥹💗</b><br/>
+            Makasih udah mau maafin. Leenka janji bakal lebih jaga sikap & komunikasi.
+            <div style="margin-top:10px; color:#555" id="resultExtra"></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="sticker">
+            <div class="ico">🍵</div>
+            <div>
+              <p class="st-title">Matcha peace offering</p>
+              <p class="st-sub">Kita balik bikin matcha lagi, no diem-dieman club ya.</p>
+            </div>
+          </div>
+          <div class="sticker">
+            <div class="ico">🏪</div>
+            <div>
+              <p class="st-title">Indomaret moment</p>
+              <p class="st-sub">Leenka beneran nggak sengaja ninggalin kamu tadi 😭</p>
+            </div>
+          </div>
+          <div class="sticker">
+            <div class="ico">🫶</div>
+            <div>
+              <p class="st-title">No ngilang</p>
+              <p class="st-sub">Kalau kamu butuh waktu, Leenka tunggu dengan sopan.</p>
+            </div>
+          </div>
+
+          <div class="footer">
+            <span>Made with 🥺💚</span>
+            <span id="counter">Hati terkirim: 0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // ====== Init date ======
+  const now = new Date();
+  const opts = { weekday: "long", year:"numeric", month:"long", day:"numeric" };
+  document.querySelector("#today").textContent = now.toLocaleDateString("id-ID", opts);
+
+  // ====== Default message ======
+  const defaultText =
+`Elee maafin Leenka yaaa 🥺
+Leenka bukan sengaja ninggalin kamu pas mau ke Indomaret tadiii.
+Leenka cuma mikir bentar doang, eh malah kejadian beneran 😭
+
+Padahal tadi kita fun-fun, bikin matcha, ketawa-ketawa,
+kok sekarang malah jadi diem-dieman… huuuu 💔
+
+Leenka mau minta maaf tapi malu 👉👈
+takut kamu kesel, takut suasananya jadi aneh,
+padahal Leenka nggak ada niat bikin kamu ngerasa sendirian sama sekali.
+
+Maafin Leenka yaaa,
+biar kalian bisa balik ketawa lagi,
+bikin matcha lagi,
+dan nggak ada lagi yang dipendem 🫶💚`;
+
+  const msgBox = document.querySelector("#messageBox");
+  const preview = document.querySelector("#msgPreview");
+  msgBox.value = defaultText;
+
+  const escapeHtml = (s) =>
+    s.replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;")
+     .replaceAll('"',"&quot;").replaceAll("'","&#039;");
+
+  function renderPreview(){
+    const t = msgBox.value.trim() || defaultText;
+    preview.innerHTML = escapeHtml(t).replace(/\n/g, "<br/>");
+  }
+  msgBox.addEventListener("input", renderPreview);
+  renderPreview();
+
+  // ====== Hearts ======
+  const heartsBox = document.querySelector("#hearts");
+  const card = document.querySelector("#card");
+  let heartsSent = 0;
+  const counter = document.querySelector("#counter");
+
+  function spawnHeart(x=null){
+    const h = document.createElement("div");
+    h.className = "heart";
+    const icons = ["💗","💖","💘","💕","💞","🫶","🥺","💚"];
+    h.textContent = icons[Math.floor(Math.random()*icons.length)];
+    const rect = card.getBoundingClientRect();
+    const left = x ?? (Math.random() * rect.width);
+    h.style.left = left + "px";
+    h.style.bottom = "-10px";
+    h.style.fontSize = (14 + Math.random()*18) + "px";
+    h.style.animationDuration = (2.2 + Math.random()*1.4) + "s";
+    heartsBox.appendChild(h);
+    setTimeout(()=> h.remove(), 3300);
+  }
+
+  document.querySelector("#btnHearts").addEventListener("click", ()=>{
+    heartsSent += 7;
+    counter.textContent = `Hati terkirim: ${heartsSent}`;
+    for(let i=0;i<8;i++) setTimeout(()=>spawnHeart(), i*80);
+  });
+
+  // ====== Runaway "No" button ======
+  const btnNo = document.querySelector("#btnNo");
+  const actions = document.querySelector("#actions");
+
+  const clamp = (n,a,b)=>Math.max(a,Math.min(b,n));
+
+  function placeNoButton(){
+    const a = actions.getBoundingClientRect();
+    const maxX = a.width - btnNo.offsetWidth;
+    const maxY = a.height - btnNo.offsetHeight;
+    const x = clamp(Math.random()*maxX, 0, maxX);
+    const y = clamp(Math.random()*maxY, 0, maxY);
+    btnNo.style.transform = `translate(${x}px, ${y}px)`;
+  }
+  requestAnimationFrame(placeNoButton);
+  ["mouseenter","touchstart"].forEach(evt=>{
+    btnNo.addEventListener(evt, ()=>{
+      placeNoButton();
+      spawnHeart();
+    }, {passive:true});
+  });
+  btnNo.addEventListener("click", ()=>{
+    document.querySelector("#badgeText").textContent = "Mode: gapapa, pelan-pelan ya 🙏";
+  });
+
+  // ====== Copy message ======
+  document.querySelector("#btnCopy").addEventListener("click", async ()=>{
+    const text = (msgBox.value || defaultText).trim();
+    try{
+      await navigator.clipboard.writeText(text);
+      document.querySelector("#badgeText").textContent = "Mode: pesan tersalin ✅";
+      for(let i=0;i<5;i++) setTimeout(()=>spawnHeart(), i*120);
+    }catch{
+      alert("Browser kamu nggak ngizinin clipboard. Coba copy manual ya.");
+    }
+  });
+
+  // ====== Confetti ======
+  const canvas = document.querySelector("#confetti");
+  const ctx = canvas.getContext("2d");
+  let pieces = [];
+  let running = false;
+
+  function resizeCanvas(){
+    const rect = card.getBoundingClientRect();
+    canvas.width = Math.floor(rect.width * devicePixelRatio);
+    canvas.height = Math.floor(rect.height * devicePixelRatio);
+    ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);
+  }
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
+
+  function startConfetti(){
+    resizeCanvas();
+    const rect = card.getBoundingClientRect();
+    const originX = rect.width * 0.35;
+    const originY = rect.height * 0.18;
+
+    pieces = [];
+    const n = 170;
+    const shapes = ["rect","circle","heart"];
+
+    for(let i=0;i<n;i++){
+      pieces.push({
+        x: originX + (Math.random()*60 - 30),
+        y: originY + (Math.random()*40 - 20),
+        vx: (Math.random()*6 - 3),
+        vy: -(Math.random()*7 + 2),
+        g: 0.18 + Math.random()*0.12,
+        r: 4 + Math.random()*5,
+        rot: Math.random()*Math.PI,
+        vr: (Math.random()*0.25 - 0.125),
+        life: 90 + Math.floor(Math.random()*40),
+        shape: shapes[Math.floor(Math.random()*shapes.length)],
+        // random pastel-ish color
+        col: `hsl(${Math.floor(Math.random()*360)}, 80%, 75%)`
+      });
+    }
+    running = true;
+    tick();
+  }
+
+  function drawHeart(x,y,s,rot,color){
+    ctx.save();
+    ctx.translate(x,y);
+    ctx.rotate(rot);
+    ctx.scale(s/12, s/12);
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(0, 3);
+    ctx.bezierCurveTo(0, -3, -6, -3, -6, 2);
+    ctx.bezierCurveTo(-6, 6, -2, 8, 0, 10);
+    ctx.bezierCurveTo(2, 8, 6, 6, 6, 2);
+    ctx.bezierCurveTo(6, -3, 0, -3, 0, 3);
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+  }
+
+  function tick(){
+    if(!running) return;
+    const w = canvas.width / devicePixelRatio;
+    const h = canvas.height / devicePixelRatio;
+
+    ctx.clearRect(0,0,w,h);
+
+    pieces.forEach(p=>{
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += p.g;
+      p.rot += p.vr;
+      p.life -= 1;
+
+      ctx.fillStyle = p.col;
+
+      if(p.shape === "rect"){
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rot);
+        ctx.fillRect(-p.r, -p.r, p.r*2, p.r*2);
+        ctx.restore();
+      } else if(p.shape === "circle"){
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r*0.9, 0, Math.PI*2);
+        ctx.fill();
+      } else {
+        drawHeart(p.x, p.y, p.r*2.1, p.rot, p.col);
+      }
+    });
+
+    pieces = pieces.filter(p=>p.life>0 && p.y < h + 40);
+
+    if(pieces.length === 0){
+      running = false;
+      ctx.clearRect(0,0,w,h);
+      return;
+    }
+    requestAnimationFrame(tick);
+  }
+
+  // ====== Yes button behavior ======
+  const btnYes = document.querySelector("#btnYes");
+  const result = document.querySelector("#result");
+  const resultExtra = document.querySelector("#resultExtra");
+
+  btnYes.addEventListener("click", ()=>{
+    document.querySelector("#badgeText").textContent = "Mode: udah dimaafin! 🥹💚";
+    result.classList.remove("hidden");
+    startConfetti();
+
+    // send hearts too
+    for(let i=0;i<10;i++) setTimeout(()=>spawnHeart(), i*70);
+
+    // add a cute extra line
+    resultExtra.innerHTML = "Deal ya… abis ini kita bikin matcha lagi 🍵 terus ngobrol baik-baik.";
+  });
+</script>
+</body>
+</html>
