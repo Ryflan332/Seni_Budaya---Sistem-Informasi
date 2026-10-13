@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Adat Tradisional - Budaya Indonesia</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            50: '#FDFBF7',
+                            100: '#FBF7EE',
+                            200: '#F4ECE0',
+                            300: '#E9DEC9',
+                        },
+                        terracotta: {
+                            DEFAULT: '#C05621',
+                            light: '#D97736',
+                            dark: '#9C4215',
+                        },
+                        earth: {
+                            DEFAULT: '#2B2118',
+                            dark: '#1C150E',
+                            subtle: '#6B5E51',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #FBF7EE;
+            color: #2B2118;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-display {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+    </style>
+</head>
+<body class="bg-cream-100 text-earth antialiased selection:bg-terracotta selection:text-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="w-full pt-6 pb-4 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+            <img src="img/logo_seni_budaya.png" alt="Logo Seni Budaya Indonesia" class="w-10 h-10 object-contain rounded-full shadow-sm">
+            <span class="font-display font-bold text-lg tracking-tight text-earth group-hover:text-terracotta transition-colors">
+                Budaya Indonesia
+            </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-earth/80">
+            <a href="index.html" class="hover:text-terracotta transition-colors">Beranda</a>
+            <a href="ragam-warisan.html" class="text-terracotta border-b-2 border-terracotta pb-0.5">Ragam Warisan</a>
+            <a href="pages/galeri/index.html" class="hover:text-terracotta transition-colors">Galeri</a>
+            <a href="pages/about/index.html" class="hover:text-terracotta transition-colors">About</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="flex items-center gap-4">
+            <a href="#katalog" class="hidden sm:inline-flex items-center gap-2 bg-[#231A14] hover:bg-[#382b22] text-white text-[11px] font-bold tracking-widest uppercase px-5 py-2.5 rounded-md shadow-sm transition-all transform hover:-translate-y-0.5">
+                <span>Mulai Jelajah</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-earth focus:outline-none p-2" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 py-4 bg-cream-200/95 border-b border-cream-300 mx-6 rounded-xl mb-4 transition-all">
+        <nav class="flex flex-col gap-3 text-sm font-medium">
+            <a href="index.html" class="hover:text-terracotta text-earth/80">Beranda</a>
+            <a href="ragam-warisan.html" class="text-terracotta font-semibold">Ragam Warisan</a>
+            <a href="pages/galeri/index.html" class="hover:text-terracotta text-earth/80">Galeri</a>
+            <a href="pages/about/index.html" class="hover:text-terracotta text-earth/80">About</a>
+            <a href="#katalog" class="mt-2 text-center bg-[#231A14] text-white text-xs font-bold py-2.5 rounded-md uppercase tracking-wider">
+                Mulai Jelajah
+            </a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- ================= HERO HEADER ================= -->
+        <section class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-4 pb-8 text-center">
+            <!-- Breadcrumbs -->
+            <div class="inline-flex items-center gap-2 text-[11px] font-semibold text-earth-subtle uppercase tracking-wider mb-4">
+                <a href="index.html" class="hover:text-terracotta transition-colors">Beranda</a>
+                <span class="text-cream-300">•</span>
+                <a href="ragam-warisan.html" class="hover:text-terracotta transition-colors">Ragam Warisan</a>
+                <span class="text-cream-300">•</span>
+                <span class="text-terracotta">Rumah Adat</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-[54px] font-semibold text-earth tracking-tight max-w-4xl mx-auto leading-tight">
+                Rumah Adat Tradisional : <span class="text-terracotta italic font-normal">Kearifan Struktur & Filosofi Hunian</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="mt-4 text-earth-subtle text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
+                Karya agung nenek moyang dalam menata ruang hidup selaras dengan hukum alam. Mengadopsi teknologi pasak kayu tahan gempa dan makna kosmologis persaudaraan adat nusantara.
+            </p>
+
+            <!-- Big Banner Image with Pill Tag -->
+            <div class="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-lg border border-cream-300/60 aspect-[16/7] md:aspect-[21/8] mt-8 bg-cream-200">
+                <img 
+                    src="img/rumah.jpg" 
+                    alt="Keagungan Arsitektur Rumah Adat Tradisional Nusantara" 
+                    class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out"
+                >
+                <!-- Badge Top Left -->
+                <div class="absolute top-5 left-5 md:top-7 md:left-7 bg-black/60 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full text-[11px] font-medium tracking-wide flex items-center gap-2 border border-white/20">
+                    <i class="fa-solid fa-location-dot text-terracotta-light text-xs"></i>
+                    <span>Arsitektur Khas Nusantara</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= REGION FILTER BAR ================= -->
+        <section class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pb-8">
+            <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-4 border border-[#E8DEC9] shadow-2xs flex items-center gap-3 overflow-x-auto no-scrollbar">
+                <div class="flex items-center gap-2 text-xs font-bold text-earth pl-2 pr-3 border-r border-cream-300 whitespace-nowrap">
+                    <i class="fa-solid fa-sliders text-terracotta"></i>
+                    <span>Wilayah:</span>
+                </div>
+                <!-- Pills -->
+                <div class="flex items-center gap-2 flex-nowrap" id="houseFilterContainer">
+                    <button class="house-btn active px-4 py-1.5 rounded-full text-xs font-semibold bg-[#231A14] text-white whitespace-nowrap transition-all" data-prov="all">
+                        Semua (13)
+                    </button>
+                    <button class="house-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Sumatera">
+                        Sumatera
+                    </button>
+                    <button class="house-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Jawa">
+                        Jawa
+                    </button>
+                    <button class="house-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Bali">
+                        Bali & Nusa Tenggara
+                    </button>
+                    <button class="house-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Kalimantan">
+                        Kalimantan
+                    </button>
+                    <button class="house-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Sulawesi">
+                        Sulawesi
+                    </button>
+                    <button class="house-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Maluku Papua">
+                        Maluku & Papua
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= KATALOG RUMAH ADAT (13 CARDS GRID) ================= -->
+        <section id="katalog" class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-8">
+            <!-- Section Title Row -->
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+                <div>
+                    <span class="text-[10px] font-bold tracking-[0.2em] text-terracotta uppercase block mb-1">
+                        KATALOG ARSITEKTUR ADAT
+                    </span>
+                    <h2 class="font-display text-3xl font-semibold text-earth">
+                        Rumah Adat Tradisional
+                    </h2>
+                </div>
+                <p class="text-xs text-earth-subtle max-w-sm sm:text-right">
+                    Menampilkan 13 rumah adat tradisional nusantara yang mencerminkan harmoni arsitektur vernakular, material lestari, dan kearifan lokal.
+                </p>
+            </div>
+
+            <!-- 13 Cards Grid -->
+            <div id="houseGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 1: Rumah Gadang -->
+                <article class="house-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Sumatera" data-origin="Sumatera Barat">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/rumah-gadang.jpg" alt="Rumah Gadang Minangkabau" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Sumatera Barat</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs" title="Simpan ke Favorit"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Rumah Gadang
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Tempat tinggal keluarga besar matrilineal dengan atap melengkung runcing menyerupai tanduk kerbau (gonjong) yang tahan gempa.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/rumah-adat/rumah-gadang.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Detail</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 2: Rumah Tongkonan -->
+                <article class="house-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Sulawesi" data-origin="Sulawesi Selatan">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/rumah-tongkonan.jpg" alt="Rumah Adat Tongkonan Toraja" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Sulawesi Selatan</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs" title="Simpan ke Favorit"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Rumah Tongkonan
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Pusat kehidupan sosial-keagamaan beratap perahu melengkung yang dihiasi jajaran tanduk kerbau penanda status sosial klan.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/rumah-adat/rumah-tongkonan.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Detail</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 3: Rumah Joglo -->
+                <article class="house-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Jawa" data-origin="Jawa Tengah">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/rumah-joglo.jpg" alt="Rumah Joglo Jawa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Jawa Tengah & DIY</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs" title="Simpan ke Favorit"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Rumah Joglo
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Tempat tinggal bangsawan beratap tajug gunungan yang disangga empat soko guru serta memiliki pendopo luas terbuka.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/rumah-adat/rumah-joglo.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Detail</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 4: Rumah Honai -->
+                <article class="house-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Maluku Papua" data-origin="Papua">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/rumah-honai.jpg" alt="Rumah Honai Papua" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Papua, Dani</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs" title="Simpan ke Favorit"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Rumah Honai
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Hunian bundar menyerupai jamur beratap jerami tebal tanpa jendela yang dirancang khusus menahan dinginnya udara pegunungan.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/rumah-adat/rumah-honai.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Detail</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 5: Rumah Bolon -->
+                <article class="house-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Sumatera" data-origin="Sumatera Utara">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/rumah-bolon.jpg" alt="Rumah Bolon Batak" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Sumatera Utara</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs" title="Simpan ke Favorit"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Rumah Bolon
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Kediaman para raja Batak beratap melengkung pelana kuda tanpa paku logam, diperkaya ukiran gorga simbol kemakmuran.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/rumah-adat/rumah-bolon.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Detail</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 6: Rumah Kebaya -->
+                <article class="house-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Jawa" data-origin="DKI Jakarta">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/rumah-kebaya.jpg" alt="Rumah Kebaya Betawi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">DKI Jakarta</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs" title="Simpan ke Favorit"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Rumah Kebaya
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Hunian Betawi beratap lipatan kebaya dengan serambi (teras) luas terbuka berpagar ukiran gigi balang yang ramah menerima tamu.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/rumah-adat/rumah-kebaya.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Detail</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 7: Rumah Limas -->
+                <article class="house-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Sumatera" data-origin="Sumatera Selatan">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/rumah-limas.jpg" alt="Rumah Limas Palembang" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Sumatera Selatan</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs" title="Simpan ke Favorit"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Rumah Limas
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Rumah panggung piramida dengan lantai berjenjang lima tingkat (kekijing) yang merefleksikan jenjang sosial bangsawan Palembang.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/rumah-adat/rumah-limas.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Detail</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 8: Rumah Lamin -->
+                <article class="house-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Kalimantan" data-origin="Kalimantan Timur">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/rumah-lamin.jpg" alt="Rumah Lamin Dayak Kaltim" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Kalimantan Timur</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs" title="Simpan ke Favorit"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Rumah Lamin
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Rumah panggung panjang komunal Dayak bermaterial kayu ulin berdaya tahan ratusan tahun dengan tiang totem blontang di halamannya.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/rumah-adat/rumah-lamin.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Detail</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 9: Rumah Krong Bade -->
+                <article class="house-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Sumatera" data-origin="Aceh">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/rumah-krong-bade.jpg" alt="Rumah Adat Krong Bade Rumoh Aceh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Aceh</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs" title="Simpan ke Favorit"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Rumah Krong Bade
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Rumah panggung tinggi dengan tangga masuk beranak ganjil di depan, serta kolong rumah yang dimanfaatkan untuk menyimpan hasil panen.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/rumah-adat/rumah-krong-bade.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Detail</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 10: Rumah Gapura Candi Bentar / Bale Tani -->
+                <article class="house-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Bali" data-origin="Bali">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/rumah-gapura-candi-bentar.jpg" alt="Rumah Tradisional Gapura Candi Bentar Bale Tani Bali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Bali</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs" title="Simpan ke Favorit"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Gapura Candi Bentar / Bale Tani
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Kompleks hunian spiritual berpagar pamedal dengan gerbang belah candi bentar serta tempat pemujaan keluarga (sanggah).
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/rumah-adat/rumah-gapura-candi-bentar.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Detail</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 11: Rumah Boyang -->
+                <article class="house-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Sulawesi" data-origin="Sulawesi Barat">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/rumah-boyang.jpg" alt="Rumah Adat Boyang Mandar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Sulawesi Barat</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs" title="Simpan ke Favorit"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Rumah Boyang
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Rumah panggung Mandar bertiang di atas tumpuan batu tanpa pasak tanam dengan ornamen bumbungan bertingkat (tumbaq).
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/rumah-adat/rumah-boyang.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Detail</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 12: Rumah Walewangko -->
+                <article class="house-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Sulawesi" data-origin="Sulawesi Utara">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/rumah-walewangko.jpg" alt="Rumah Adat Walewangko Minahasa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Sulawesi Utara</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs" title="Simpan ke Favorit"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Rumah Walewangko
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Rumah adat Minahasa berstruktur knock-down kayu keras dengan dua tangga simetris di depan dan teras lesar lapang.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/rumah-adat/rumah-walewangko.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Detail</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 13: Rumah Baileo -->
+                <article class="house-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Maluku Papua" data-origin="Maluku">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/rumah-baileo.jpg" alt="Rumah Adat Baileo Maluku Ambon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Maluku, Ambon</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs" title="Simpan ke Favorit"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Rumah Baileo
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Balai musyawarah panggung terbuka tanpa dinding agar roh leluhur leluasa hadir bersama masyarakat yang bersila.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/rumah-adat/rumah-baileo.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Detail</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= RAGAM SEBARAN WILAYAH BUDAYA (6 REGION BOXES) ================= -->
+        <section class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16">
+            <!-- Center Header -->
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-cream-200 text-terracotta mb-2 text-sm">
+                    <i class="fa-solid fa-landmark"></i>
+                </div>
+                <h2 class="font-display text-3xl font-semibold text-earth tracking-tight">
+                    Ragam Sebaran Arsitektur Vernakular
+                </h2>
+                <p class="mt-2 text-xs sm:text-sm text-earth-subtle leading-relaxed">
+                    Setiap rumah adat dirancang secara genius merespons iklim tropis lembab, kontur rawa atau lereng gunung.
+                </p>
+            </div>
+
+            <!-- 6 Regions Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Wilayah Sumatera -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Sumatera
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Rumah Gadang (Minangkabau)</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Rumah Bolon (Batak)</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Rumah Limas (Palembang)</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Rumah Krong Bade (Aceh)</li>
+                    </ul>
+                </div>
+
+                <!-- Wilayah Jawa -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Jawa
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Rumah Joglo (Jawa Tengah & DIY)</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Rumah Kebaya (Betawi Jakarta)</li>
+                    </ul>
+                </div>
+
+                <!-- Wilayah Kalimantan -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Kalimantan
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Rumah Lamin (Dayak Kaltim)</li>
+                    </ul>
+                </div>
+
+                <!-- Wilayah Sulawesi -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Sulawesi
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Rumah Tongkonan (Toraja)</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Rumah Boyang (Mandar Sulbar)</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Rumah Walewangko (Minahasa Sulut)</li>
+                    </ul>
+                </div>
+
+                <!-- Wilayah Bali & Nusa Tenggara -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Bali & Nusa Tenggara
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Gapura Candi Bentar / Bale Tani (Bali)</li>
+                    </ul>
+                </div>
+
+                <!-- Wilayah Maluku & Papua -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Maluku & Papua
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Rumah Honai (Dani Papua)</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Rumah Baileo (Maluku Ambon)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#231A14] text-cream-100 pt-16 pb-12 border-t border-[#382b22]">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+            <!-- Footer Content Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#382b22]/70">
+                <!-- Col 1: Brand Info -->
+                <div class="md:col-span-6 lg:col-span-5">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="img/logo_seni_budaya.png" alt="Logo Seni Budaya Indonesia" class="w-9 h-9 object-contain rounded-full bg-white/10 p-0.5 border border-amber-600/40">
+                        <span class="font-display font-bold text-lg tracking-tight text-white">Budaya Indonesia</span>
+                    </div>
+                    <p class="text-xs text-cream-300/70 leading-relaxed max-w-sm">
+                        Sebuah platform dedikasi untuk melestarikan dan memperkenalkan kekayaan seni tari, musik, rumah adat, serta kuliner warisan leluhur Nusantara ke kancah global.
+                    </p>
+                </div>
+
+                <!-- Col 2: Kategori Nav -->
+                <div class="md:col-span-3 lg:col-span-3 md:pl-8">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-amber-500/90 mb-4">Kategori</h3>
+                    <ul class="space-y-2.5 text-xs text-cream-300/80">
+                        <li><a href="seni-tari.html" class="hover:text-white transition-colors">Seni Tari</a></li>
+                        <li><a href="seni-musik.html" class="hover:text-white transition-colors">Seni Musik</a></li>
+                        <li><a href="rumah-adat.html" class="hover:text-white transition-colors">Rumah Adat</a></li>
+                        <li><a href="makanan-tradisional.html" class="hover:text-white transition-colors">Makanan Tradisional</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Organisasi -->
+                <div class="md:col-span-3 lg:col-span-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-amber-500/90 mb-4">Organisasi</h3>
+                    <ul class="space-y-2.5 text-xs text-cream-300/80">
+                        <li><a href="pages/about/index.html" class="hover:text-white transition-colors">Tentang Kami</a></li>
+                        <li><a href="pages/about/index.html#kontak" class="hover:text-white transition-colors">Kontak</a></li>
+                        <li><a href="pages/galeri/index.html" class="hover:text-white transition-colors">Galeri</a></li>
+                        <li><a href="ragam-warisan.html" class="hover:text-white transition-colors">Donasi Budaya</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright & Socials -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-cream-300/60">
+                <p>&copy; 2026 Budaya Indonesia. Seluruh hak cipta dilindungi undang-undang.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-cream-100 transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-cream-100 transition-colors">YouTube</a>
+                    <a href="#" class="hover:text-cream-100 transition-colors">TikTok</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Filter Script -->
+    <script>
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        const houseButtons = document.querySelectorAll('.house-btn');
+        const houseCards = document.querySelectorAll('.house-card');
+
+        houseButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                houseButtons.forEach(b => {
+                    b.classList.remove('bg-[#231A14]', 'text-white');
+                    b.classList.add('bg-cream-100', 'text-earth');
+                });
+                btn.classList.add('bg-[#231A14]', 'text-white');
+                btn.classList.remove('bg-cream-100', 'text-earth');
+
+                const targetProv = btn.getAttribute('data-prov');
+
+                houseCards.forEach(card => {
+                    const cardProv = card.getAttribute('data-prov') || '';
+                    if (targetProv === 'all' || cardProv.includes(targetProv)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* ===================================================
+   BUDAYA INDONESIA - GLOBAL STYLESHEET
+   Koleksi & Pelestarian Warisan Luhur Nusantara
+   =================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+:root {
+    --color-cream-bg: #FBF7EE;
+    --color-cream-card: #FFFFFF;
+    --color-cream-subtle: #F4ECE0;
+    --color-terracotta: #C05621;
+    --color-terracotta-dark: #9C4215;
+    --color-earth-dark: #231A14;
+    --color-earth-text: #2B2118;
+    --color-earth-subtle: #6B5E51;
+}
+
+body {
+    background-color: var(--color-cream-bg);
+    color: var(--color-earth-text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F4ECE0;
+}
+::-webkit-scrollbar-thumb {
+    background: #D4C3A3;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #C05621;
+}
+
+/* Smooth reveal animation classes */
+.reveal-fade-up {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-fade-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-fade-in {
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.reveal-fade-in.active {
+    opacity: 1;
+}
+
+/* Hover Lift Effect */
+.card-hover-lift {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px -8px rgba(43, 33, 24, 0.12);
+}
+
+/* Zoom Image Effect */
+.image-zoom-container img {
+    transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.image-zoom-container:hover img {
+    transform: scale(1.05);
+}
+
+/* Modal lightbox styling */
+#imageModal {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#imageModal.active {
+    opacity: 1;
+    visibility: visible;
+}

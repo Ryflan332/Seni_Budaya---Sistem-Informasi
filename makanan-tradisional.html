@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makanan Tradisional Nusantara - Budaya Indonesia</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            50: '#FDFBF7',
+                            100: '#FBF7EE',
+                            200: '#F4ECE0',
+                            300: '#E9DEC9',
+                        },
+                        terracotta: {
+                            DEFAULT: '#C05621',
+                            light: '#D97736',
+                            dark: '#9C4215',
+                        },
+                        earth: {
+                            DEFAULT: '#2B2118',
+                            dark: '#1C150E',
+                            subtle: '#6B5E51',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FBF7EE;
+            color: #2B2118;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-display {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+    </style>
+</head>
+<body class="bg-cream-100 text-earth antialiased selection:bg-terracotta selection:text-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="w-full pt-6 pb-4 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+            <img src="img/logo_seni_budaya.png" alt="Logo Seni Budaya Indonesia" class="w-10 h-10 object-contain rounded-full shadow-sm">
+            <span class="font-display font-bold text-lg tracking-tight text-earth group-hover:text-terracotta transition-colors">
+                Budaya Indonesia
+            </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-earth/80">
+            <a href="index.html" class="hover:text-terracotta transition-colors">Beranda</a>
+            <a href="ragam-warisan.html" class="text-terracotta border-b-2 border-terracotta pb-0.5">Ragam Warisan</a>
+            <a href="index.html#galeri" class="hover:text-terracotta transition-colors">Galeri</a>
+            <a href="index.html#tentang" class="hover:text-terracotta transition-colors">Tentang</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="flex items-center gap-4">
+            <a href="#katalog" class="hidden sm:inline-flex items-center gap-2 bg-[#231A14] hover:bg-[#382b22] text-white text-[11px] font-bold tracking-widest uppercase px-5 py-2.5 rounded-md shadow-sm transition-all transform hover:-translate-y-0.5">
+                <span>Mulai Jelajah</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-earth focus:outline-none p-2" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 py-4 bg-cream-200/95 border-b border-cream-300 mx-6 rounded-xl mb-4 transition-all">
+        <nav class="flex flex-col gap-3 text-sm font-medium">
+            <a href="index.html" class="hover:text-terracotta text-earth/80">Beranda</a>
+            <a href="ragam-warisan.html" class="text-terracotta font-semibold">Ragam Warisan</a>
+            <a href="index.html#galeri" class="hover:text-terracotta text-earth/80">Galeri</a>
+            <a href="index.html#tentang" class="hover:text-terracotta text-earth/80">Tentang</a>
+            <a href="#katalog" class="mt-2 text-center bg-[#231A14] text-white text-xs font-bold py-2.5 rounded-md uppercase tracking-wider">
+                Mulai Jelajah
+            </a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- ================= HERO SECTION ================= -->
+        <section class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-4 pb-10 text-center">
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center justify-center gap-2 text-xs text-earth-subtle mb-6">
+                <a href="index.html" class="hover:text-terracotta transition-colors">Beranda</a>
+                <span>/</span>
+                <a href="ragam-warisan.html" class="hover:text-terracotta transition-colors">Ragam Warisan</a>
+                <span>/</span>
+                <span class="text-earth font-medium">Makanan Tradisional</span>
+            </nav>
+
+            <!-- Pill Badge -->
+            <div class="inline-flex items-center gap-2 bg-cream-200/90 border border-[#E4D9C4] px-4 py-1.5 rounded-full text-[11px] font-bold tracking-widest text-terracotta uppercase mb-4 shadow-2xs">
+                <i class="fa-solid fa-utensils text-xs"></i>
+                <span>KHAZANAH KULINER & RASA NUSANTARA</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-[54px] font-semibold text-earth tracking-tight max-w-4xl mx-auto leading-tight">
+                Makanan Tradisional : <span class="text-terracotta italic font-normal">Kekayaan Rempah & Filosofi Rasa</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="mt-4 text-earth-subtle text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
+                Jejak jalur rempah dunia yang berakar dalam sajian autentik ibu pertiwi. Lebih dari sekadar santapan, ia melambangkan kebersamaan, rasa syukur, dan kehangatan keluarga nusantara.
+            </p>
+
+            <!-- Big Banner Image with Pill Tag -->
+            <div class="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-lg border border-cream-300/60 aspect-[16/7] md:aspect-[21/8] mt-8 bg-cream-200">
+                <img 
+                    src="img/makanan.png" 
+                    alt="Sajian Kuliner Tradisional Nusantara Penuh Rempah" 
+                    class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out"
+                >
+                <!-- Badge Top Left -->
+                <div class="absolute top-5 left-5 md:top-7 md:left-7 bg-black/60 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full text-[11px] font-medium tracking-wide flex items-center gap-2 border border-white/20">
+                    <i class="fa-solid fa-fire-burner text-terracotta-light text-xs"></i>
+                    <span>Warisan Gastronomi Dunia</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROVINCE / REGION FILTER BAR ================= -->
+        <section class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pb-8">
+            <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-4 border border-[#E8DEC9] shadow-2xs flex items-center gap-3 overflow-x-auto no-scrollbar">
+                <div class="flex items-center gap-2 text-xs font-bold text-earth pl-2 pr-3 border-r border-cream-300 whitespace-nowrap">
+                    <i class="fa-solid fa-sliders text-terracotta"></i>
+                    <span>Asal Daerah:</span>
+                </div>
+                <!-- Pills -->
+                <div class="flex items-center gap-2 flex-nowrap" id="foodFilterContainer">
+                    <button class="food-btn active px-4 py-1.5 rounded-full text-xs font-semibold bg-[#231A14] text-white whitespace-nowrap transition-all" data-prov="all">
+                        Semua
+                    </button>
+                    <button class="food-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Sumatera">
+                        Sumatera
+                    </button>
+                    <button class="food-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Jawa">
+                        Jawa & Yogyakarta
+                    </button>
+                    <button class="food-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Bali Nusa Tenggara">
+                        Bali & Nusa Tenggara
+                    </button>
+                    <button class="food-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Kalimantan">
+                        Kalimantan
+                    </button>
+                    <button class="food-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Sulawesi">
+                        Sulawesi
+                    </button>
+                    <button class="food-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Maluku Papua">
+                        Maluku & Papua
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= KATALOG KULINER (15 CARDS GRID) ================= -->
+        <section id="katalog" class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-8">
+            <!-- Section Title Row -->
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+                <div>
+                    <span class="text-[10px] font-bold tracking-[0.2em] text-terracotta uppercase block mb-1">
+                        KATALOG KULINER TRADISIONAL
+                    </span>
+                    <h2 class="font-display text-3xl font-semibold text-earth">
+                        Hidangan Khas Nusantara
+                    </h2>
+                </div>
+                <p class="text-xs text-earth-subtle max-w-sm sm:text-right">
+                    Menampilkan 15 sajian legendaris dengan resep rempah pilihan warisan turun-temurun.
+                </p>
+            </div>
+
+            <!-- 12 Cards Grid -->
+            <div id="foodGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 1: Rendang -->
+                <article class="food-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Sumatera">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/rendang.jpg" alt="Rendang Padang Sumatera Barat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Padang, Sumatera Barat</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Rendang
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Daging sapi dimasak berjam-jam dengan santan kental dan rempah hingga kering cokelat tua, empuk, dan gurih pedas.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/makanan-tradisional/rendang.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Resep & Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 2: Gudeg -->
+                <article class="food-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Jawa">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/gudeg.jpg" alt="Gudeg Yogyakarta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Yogyakarta</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Gudeg
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Nangka muda direbus berjam-jam dengan gula merah, santan, dan daun jati. Manis gurih berpadu krecek dan opor ayam.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/makanan-tradisional/gudeg.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Resep & Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 3: Papeda -->
+                <article class="food-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Maluku Papua">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/papeda.jpg" alt="Papeda Maluku dan Papua" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Maluku dan Papua</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Papeda
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Tepung sagu kenyal bening diseduh air panas, diciduk dengan garpu kayu bersama kuah ikan kuning asam yang segar.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/makanan-tradisional/papeda.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Resep & Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 4: Coto Makassar -->
+                <article class="food-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Sulawesi">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/coto-makassar.jpg" alt="Coto Makassar Sulawesi Selatan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Makassar, Sulsel</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Coto Makassar
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Sup daging sapi kuah kental rebusan kacang tanah sangrai dan rempah ketumbar jintan, disajikan bersama burasa.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/makanan-tradisional/coto-makassar.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Resep & Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 5: Ayam Betutu -->
+                <article class="food-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Bali Nusa Tenggara">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/ayam-betutu.jpg" alt="Ayam Betutu Bali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Bali</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Ayam Betutu
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Ayam utuh diisi bumbu rempah lengkap dibungkus daun pisang dan dipanggang abu panas berjam-jam hingga pedas gurih meresap.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/makanan-tradisional/ayam-betutu.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Resep & Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 6: Pempek -->
+                <article class="food-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Sumatera">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/pempek.jpg" alt="Pempek Palembang Sumatera Selatan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Palembang, Sumsel</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Pempek
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Olahan daging ikan tenggiri dan sagu beraneka bentuk, kenyal gurih disajikan dengan kuah cuko pedas manis asam.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/makanan-tradisional/pempek.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Resep & Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 7: Mie Aceh -->
+                <article class="food-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Sumatera">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/mie-aceh.jpg" alt="Mie Aceh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Aceh</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Mie Aceh
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Mie kuning tebal dimasak bumbu rempah pedas kuat seperti kunyit, jintan, dan cabai dengan daging atau udang segar.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/makanan-tradisional/mie-aceh.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Resep & Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 8: Soto Banjar -->
+                <article class="food-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Kalimantan">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/soto-banjar.jpg" alt="Soto Banjar Kalimantan Selatan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Kalimantan Selatan</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Soto Banjar
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Sup ayam kuah bening harum aroma kayu manis, cengkeh, dan pala berisi ayam, soun, telur, dan kentang goreng.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/makanan-tradisional/soto-banjar.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Resep & Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 9: Se'i Sapi -->
+                <article class="food-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Bali Nusa Tenggara">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/sei-sapi.jpg" alt="Se'i Sapi Kupang Nusa Tenggara Timur" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Kupang, NTT</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Se'i Sapi
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Daging sapi iris tipis diasap kayu kosambi tanpa api langsung, lembut aromatik harum berasap disajikan dengan sambal.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/makanan-tradisional/sei-sapi.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Resep & Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 10: Tinutuan / Bubur Manado -->
+                <article class="food-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Sulawesi">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/bubur-manado.jpg" alt="Tinutuan Bubur Manado Sulawesi Utara" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Manado, Sulut</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Tinutuan (Bubur Manado)
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Bubur nasi dengan labu kuning, jagung manis, kangkung, bayam, dan kemangi. Tanpa santan, gurih alami dan sangat segar.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/makanan-tradisional/tinutuan.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Resep & Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                
+
+                <!-- 12: Karedok -->
+                <article class="food-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Jawa">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/karedok.jpg" alt="Karedok Jawa Barat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Jawa Barat</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Karedok
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Sayuran mentah segar renyah disiram bumbu kacang kencur dan cabai yang gurih pedas harum, disajikan dengan kerupuk.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/makanan-tradisional/karedok.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Resep & Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 13: Nasi Liwet -->
+                <article class="food-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Jawa">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/nasi-liwet.jpg" alt="Nasi Liwet Solo Jawa Tengah" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Solo, Jawa Tengah</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Nasi Liwet
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Nasi gurih wangi daun salam serai disajikan dengan ayam suwir, telur dadar, sambal, labu siam, dan areh santan.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/makanan-tradisional/nasi-liwet.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Resep & Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 14: Es Pisang Ijo -->
+                <article class="food-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Sulawesi">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/es-pisang-ijo.jpg" alt="Es Pisang Ijo Makassar Sulawesi Selatan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Makassar, Sulsel</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Es Pisang Ijo
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Pisang raja utuh berbalut tepung hijau lembut dikukus, disajikan dingin dengan bubur sumsum, sirup merah, dan es serut.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/makanan-tradisional/es-pisang-ijo.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Resep & Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- 15: Bubur Pedas -->
+                <article class="food-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Kalimantan">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/bubur-pedas.jpg" alt="Bubur Pedas Sambas Kalimantan Barat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Sambas, Kalbar</span>
+                            <button class="favorite-btn text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Bubbor Paddas
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Bubur beras sangrai kaya rempah lengkuas, jahe, ketumbar dengan sayuran kangkung, bayam, dan tauge hangat berkhasiat.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="pages/makanan-tradisional/bubur-pedas.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Resep & Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= RAGAM SEBARAN WILAYAH BUDAYA (6 REGION BOXES) ================= -->
+        <section class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16">
+            <!-- Center Header -->
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-cream-200 text-terracotta mb-2 text-sm">
+                    <i class="fa-solid fa-bowl-food"></i>
+                </div>
+                <h2 class="font-display text-3xl font-semibold text-earth tracking-tight">
+                    Ragam Peta Cita Rasa Nusantara
+                </h2>
+                <p class="mt-2 text-xs sm:text-sm text-earth-subtle leading-relaxed">
+                    Setiap wilayah geografis nusantara mengolah keunikan rempah endemik menjadi mahakarya cita rasa kuliner.
+                </p>
+            </div>
+
+            <!-- 6 Regions Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Wilayah Sumatera -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Sumatera
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Rendang (Padang, Sumbar)</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Pempek (Palembang, Sumsel)</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Mie Aceh (Aceh)</li>
+                    </ul>
+                </div>
+
+                <!-- Wilayah Jawa & Yogyakarta -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Jawa
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Gudeg (Yogyakarta)</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Pindang Kudus / Palembang</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Karedok (Jawa Barat)</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Nasi Liwet (Solo, Jateng)</li>
+                    </ul>
+                </div>
+
+                <!-- Wilayah Kalimantan -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Kalimantan
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Soto Banjar (Kalsel)</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Bubur Pedas (Sambas, Kalbar)</li>
+                    </ul>
+                </div>
+
+                <!-- Wilayah Sulawesi -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Sulawesi
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Coto Makassar (Sulsel)</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tinutuan (Manado, Sulut)</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Es Pisang Ijo (Makassar, Sulsel)</li>
+                    </ul>
+                </div>
+
+                <!-- Wilayah Bali & Nusa Tenggara -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Bali & Nusa Tenggara
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Ayam Betutu (Bali)</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Se'i Sapi (Kupang, NTT)</li>
+                    </ul>
+                </div>
+
+                <!-- Wilayah Maluku & Papua -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Maluku & Papua
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Papeda & Kuah Kuning</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#231A14] text-cream-100 pt-16 pb-12 border-t border-[#382b22]">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+            <!-- Footer Content Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#382b22]/70">
+                <!-- Brand Column -->
+                <div class="md:col-span-6 lg:col-span-5">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="img/logo_seni_budaya.png" alt="Logo Seni Budaya Indonesia" class="w-9 h-9 object-contain rounded-full bg-white/10 p-0.5 border border-amber-600/40">
+                        <span class="font-display font-bold text-lg tracking-tight text-white">
+                            Budaya Indonesia
+                        </span>
+                    </div>
+                    <p class="text-xs text-cream-300/70 leading-relaxed max-w-sm">
+                        Dedikasi digitalisasi dan preservasi ragam kuliner tradisional nusantara demi melestarikan rasa cinta terhadap kekayaan rempah kepulauan Indonesia.
+                    </p>
+                </div>
+
+                <!-- Nav Column 1: Kategori -->
+                <div class="md:col-span-3 lg:col-span-3 md:pl-8">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-amber-500/90 mb-4">
+                        Kategori
+                    </h3>
+                    <ul class="space-y-2.5 text-xs text-cream-300/80">
+                        <li><a href="seni-tari.html" class="hover:text-white transition-colors">Seni Tari</a></li>
+                        <li><a href="seni-musik.html" class="hover:text-white transition-colors">Seni Musik</a></li>
+                        <li><a href="rumah-adat.html" class="hover:text-white transition-colors">Rumah Adat</a></li>
+                        <li><a href="makanan-tradisional.html" class="hover:text-white transition-colors">Kuliner Tradisional</a></li>
+                    </ul>
+                </div>
+
+                <!-- Nav Column 2: Organisasi -->
+                <div class="md:col-span-3 lg:col-span-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-amber-500/90 mb-4">
+                        Organisasi
+                    </h3>
+                    <ul class="space-y-2.5 text-xs text-cream-300/80">
+                        <li><a href="index.html#tentang" class="hover:text-white transition-colors">Tentang Kami</a></li>
+                        <li><a href="index.html#tentang" class="hover:text-white transition-colors">Kontak</a></li>
+                        <li><a href="index.html#galeri" class="hover:text-white transition-colors">Galeri</a></li>
+                        <li><a href="ragam-warisan.html" class="hover:text-white transition-colors">Donasi Budaya</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-cream-300/60">
+                <p>
+                    &copy; 2026 Budaya Indonesia. Seluruh hak cipta dilindungi undang-undang.
+                </p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-cream-100 transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-cream-100 transition-colors">YouTube</a>
+                    <a href="#" class="hover:text-cream-100 transition-colors">TikTok</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Filter Script -->
+    <script>
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        const foodButtons = document.querySelectorAll('.food-btn');
+        const foodCards = document.querySelectorAll('.food-card');
+
+        foodButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                foodButtons.forEach(b => {
+                    b.classList.remove('bg-[#231A14]', 'text-white');
+                    b.classList.add('bg-cream-100', 'text-earth');
+                });
+                btn.classList.add('bg-[#231A14]', 'text-white');
+                btn.classList.remove('bg-cream-100', 'text-earth');
+
+                const targetProv = btn.getAttribute('data-prov');
+
+                foodCards.forEach(card => {
+                    const cardProv = card.getAttribute('data-prov') || '';
+                    if (targetProv === 'all' || cardProv.includes(targetProv)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

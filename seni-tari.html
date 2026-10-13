@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seni Tari Tradisional - Budaya Indonesia</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            50: '#FDFBF7',
+                            100: '#FBF7EE',
+                            200: '#F4ECE0',
+                            300: '#E9DEC9',
+                        },
+                        terracotta: {
+                            DEFAULT: '#C05621',
+                            light: '#D97736',
+                            dark: '#9C4215',
+                        },
+                        earth: {
+                            DEFAULT: '#2B2118',
+                            dark: '#1C150E',
+                            subtle: '#6B5E51',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FBF7EE;
+            color: #2B2118;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-display {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+    </style>
+</head>
+<body class="bg-cream-100 text-earth antialiased selection:bg-terracotta selection:text-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="w-full pt-6 pb-4 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+            <img src="img/logo_seni_budaya.png" alt="Logo Seni Budaya Indonesia" class="w-10 h-10 object-contain rounded-full shadow-sm">
+            <span class="font-display font-bold text-lg tracking-tight text-earth group-hover:text-terracotta transition-colors">
+                Budaya Indonesia
+            </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-earth/80">
+            <a href="index.html" class="hover:text-terracotta transition-colors">Beranda</a>
+            <a href="ragam-warisan.html" class="text-terracotta border-b-2 border-terracotta pb-0.5">Ragam Warisan</a>
+            <a href="index.html#galeri" class="hover:text-terracotta transition-colors">Galeri</a>
+            <a href="index.html#tentang" class="hover:text-terracotta transition-colors">Tentang</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="flex items-center gap-4">
+            <a href="#katalog" class="hidden sm:inline-flex items-center gap-2 bg-[#231A14] hover:bg-[#382b22] text-white text-[11px] font-bold tracking-widest uppercase px-5 py-2.5 rounded-md shadow-sm transition-all transform hover:-translate-y-0.5">
+                <span>Mulai Jelajah</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-earth focus:outline-none p-2" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 py-4 bg-cream-200/95 border-b border-cream-300 mx-6 rounded-xl mb-4 transition-all">
+        <nav class="flex flex-col gap-3 text-sm font-medium">
+            <a href="index.html" class="hover:text-terracotta text-earth/80">Beranda</a>
+            <a href="ragam-warisan.html" class="text-terracotta font-semibold">Ragam Warisan</a>
+            <a href="index.html#galeri" class="hover:text-terracotta text-earth/80">Galeri</a>
+            <a href="index.html#tentang" class="hover:text-terracotta text-earth/80">Tentang</a>
+            <a href="#katalog" class="mt-2 text-center bg-[#231A14] text-white text-xs font-bold py-2.5 rounded-md uppercase tracking-wider">
+                Mulai Jelajah
+            </a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- ================= HERO SECTION ================= -->
+        <section class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-4 pb-10 text-center">
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center justify-center gap-2 text-xs text-earth-subtle mb-6">
+                <a href="index.html" class="hover:text-terracotta transition-colors">Beranda</a>
+                <span>/</span>
+                <a href="ragam-warisan.html" class="hover:text-terracotta transition-colors">Ragam Warisan</a>
+                <span>/</span>
+                <span class="text-earth font-medium">Seni Tari</span>
+            </nav>
+
+            <!-- Pill Badge -->
+            <div class="inline-flex items-center gap-2 bg-cream-200/90 border border-[#E4D9C4] px-4 py-1.5 rounded-full text-[11px] font-bold tracking-widest text-terracotta uppercase mb-4 shadow-2xs">
+                <i class="fa-solid fa-compass text-xs"></i>
+                <span>EKSPLORASI SENI TARI INDONESIA</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-[54px] font-semibold text-earth tracking-tight max-w-4xl mx-auto leading-tight">
+                Seni Tari Tradisional : <span class="text-terracotta italic font-normal">Keindahan Gerak & Makna Budaya</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="mt-4 text-earth-subtle text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
+                Sebuah ensiklopedia hidup gerak estetik dan ritme magis dari seluruh pelosok nusantara. Menelusuri makna spiritual, sejarah perjuangan, dan kekayaan tradisi luhur yang mengalir di setiap hentakan tari.
+            </p>
+
+            <!-- Big Banner Image with Pill Tag -->
+            <div class="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-lg border border-cream-300/60 aspect-[16/7] md:aspect-[21/8] mt-8 bg-cream-200">
+                <img 
+                    src="/img/utama.jpg" 
+                    alt="Keindahan Gerak Penari Tradisional Bali dengan Kostum Emas Megah" 
+                    class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out"
+                >
+                <!-- Badge Top Left -->
+                <div class="absolute top-5 left-5 md:top-7 md:left-7 bg-black/60 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full text-[11px] font-medium tracking-wide flex items-center gap-2 border border-white/20">
+                    <i class="fa-solid fa-location-dot text-terracotta-light text-xs"></i>
+                    <span>34 Provinsi Terdata</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROVINCE FILTER BAR ================= -->
+        <section class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pb-8">
+            <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-4 border border-[#E8DEC9] shadow-2xs flex items-center gap-3 overflow-x-auto no-scrollbar">
+                <div class="flex items-center gap-2 text-xs font-bold text-earth pl-2 pr-3 border-r border-cream-300 whitespace-nowrap">
+                    <i class="fa-solid fa-sliders text-terracotta"></i>
+                    <span>Provinsi:</span>
+                </div>
+                <!-- Pills -->
+                <div class="flex items-center gap-2 flex-nowrap" id="provinceFilterContainer">
+                    <button class="prov-btn active px-4 py-1.5 rounded-full text-xs font-semibold bg-[#231A14] text-white whitespace-nowrap transition-all" data-prov="all">
+                        Semua
+                    </button>
+                    <button class="prov-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Jawa Barat">
+                        Jawa Barat
+                    </button>
+                    <button class="prov-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Sumatera Barat">
+                        Sumatera Barat
+                    </button>
+                    <button class="prov-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="D.I Yogyakarta">
+                        D.I Yogyakarta
+                    </button>
+                    <button class="prov-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Papua">
+                        Papua
+                    </button>
+                    <button class="prov-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Kalimantan Timur">
+                        Kalimantan Timur
+                    </button>
+                    <button class="prov-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Riau">
+                        Riau
+                    </button>
+                    <button class="prov-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="DKI Jakarta">
+                        DKI Jakarta
+                    </button>
+                    <button class="prov-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Kalimantan ">
+                        Kalimantan
+                    </button>
+                    <button class="prov-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Maluku">
+                       Maluku
+                    </button>
+                    <button class="prov-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Sulawesi Tengah">
+                        Sulawesi Tengah
+                    </button>
+                    <button class="prov-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-cream-100 hover:bg-cream-200 text-earth whitespace-nowrap border border-cream-300 transition-all" data-prov="Gorontalo">
+                        Gorontalo
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= KATALOG SENI TARI (12 CARDS GRID) ================= -->
+        <section id="katalog" class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-8">
+            <!-- Section Title Row -->
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+                <div>
+                    <span class="text-[10px] font-bold tracking-[0.2em] text-terracotta uppercase block mb-1">
+                        KATALOG SENI TARI TRADISIONAL
+                    </span>
+                    <h2 class="font-display text-3xl font-semibold text-earth">
+                        Seni Tari Tradisional
+                    </h2>
+                </div>
+                <p class="text-xs text-earth-subtle max-w-sm sm:text-right">
+                    Menampilkan 12 tari legendaris dengan filosofi mendalam dan warisan bernilai seni tinggi.
+                </p>
+            </div>
+
+            <!-- 12 Cards Grid (4 columns x 3 rows) -->
+            <div id="tariGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 1: Tari Kecak -->
+                <article class="tari-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Bali">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="/img/tari_kecak.jpg" alt="Tari Kecak" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Bali</span>
+                            <button class="text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Tari Kecak
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Tarian tradisional khas Bali yang dibawakan secara kolosal oleh puluhan hingga ratusan penari pria yang duduk melingkar sambil menyanyikan irama "cak-cak-cak".
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="/pages/seni-tari/tari_kecak.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!--Tari jaipong -->
+                <article class="tari-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Jawa Barat">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/tari_jaepong.jpg" alt="Tari Jaipong" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Jawa Barat (Sunda)</span>
+                            <button class="text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Tari Jaipong
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Tarian pergaulan khas Sunda yang energik, dinamis, dan penuh semangat dengan iringan musik kendang yang dominan.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="./pages/seni-tari/tari_jaipong.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!--Tari Piring Sumatera Barat -->
+                <article class="tari-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Sumatera Barat">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="/img/tari_piring.jpg" alt="Tari Piring" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Sumetera Barat</span>
+                            <button class="text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Tari Piring
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Tarian atraktif yang menampilkan kelincahan penari memegang piring di telapak tangan tanpa jatuh atau pecah.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="./pages/seni-tari/tari_piring.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- Tari Serimpi  D.I Yogyakarta -->
+                <article class="tari-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="D.I Yogyakarta">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="/img/tari_serimpi.jpg" alt="Tari Kecak Bali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">D.I Yogyakarta</span>
+                            <button class="text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Tari Serimpi
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                             Tarian klasik paling anggun dan sakral dari Keraton Yogyakarta yang melambangkan kelembutan dan kesucian wanita Jawa.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="./pages/seni-tari/tari_serimpi.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- Tari Sajojo Papua -->
+                <article class="tari-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Papua">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/Tarian-Sajojo.jpg" alt="Tari Pendet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Papua</span>
+                            <button class="text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Tari Sajojo
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Tarian tradisional penuh semangat yang mencerminkan keceriaan dan kebersamaan masyarakat Papua melalui gerakan kaki yang lincah dan kompak.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="./pages/seni-tari/tari_sajojo.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!--Tari Gong -->
+                <article class="tari-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Kalimantan Timur">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="/img/tari_gong.jpg" alt="Tari Piring" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Kalimantan Timur</span>
+                            <button class="text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Tari Gong (Tari Kancet Ledo)
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Tarian tradisional khas Dayak yang menampilkan keanggunan seorang gadis menari dengan penuh ketenangan di atas sebuah gong besar.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="./pages/seni-tari/tari_gong.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- Tari Zapin -->
+                <article class="tari-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Riau">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="/img/tari-zapin.jpg"alt="Tari Zapin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Riau</span>
+                            <button class="text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Tari Zapin
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Tarian tradisional khas Melayu yang sarat akan nuansa Islami, menampilkan gerakan kaki yang cepat, lincah, dan padu mengikuti irama petikan gambus serta pukulan marwas.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="./pages/seni-tari/tari_zapin.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- Tari Cokek -->
+                <article class="tari-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="DKI Jakarta">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="/img/tari-cokek.jpg" alt="Tari Serimpi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">DKI Jakarta</span>
+                            <button class="text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Tari Cokek
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                           Tarian pergaulan yang riang dan luwes, memadukan kebudayaan Betawi dan Tionghoa dengan ciri khas gerakan mengalungkan selendang kepada penonton atau pasangan tari.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="./pages/seni-tari/tari_cokek.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- Tari Jepin -->
+                <article class="tari-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Kalimantan ">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/tari-jepin.jpg" alt="Tari Jepin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[8px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Kalimantan Barat & Kalimantan Utara</span>
+                            <button class="text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Tari Jepin
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                             Tarian tradisional khas suku Melayu pesisir Kalimantan yang dinamis dan enerjik, mengandalkan kelincahan gerakan kaki mengikuti ketukan musik berirama Islami.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="./pages/seni-tari/tari_jepin.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- Tari Lenso -->
+                <article class="tari-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Maluku">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="/img/tari-lenso.jpg" alt="Tari Cakalele Maluku" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Maluku</span>
+                            <button class="text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Tari Lenso
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Tarian pergaulan yang lembut dan ramah dari Maluku, menampilkan gerakan melambaikan saputangan (lenso) sebagai simbol ajakan bersahabat dan kehangatan persaudaraan.
+
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="./pages/seni-tari/tari_lenso.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- Tari Dero -->
+                <article class="tari-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Sulawesi Tengah">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="/img/tari-dero.JPG" alt="Tari Gantar Dayak" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Sulawesi Tengah</span>
+                            <button class="text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Tari Dero (Tari Modero)
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Tarian masal yang penuh kehangatan dan kebersamaan, di mana para penari saling bergandengan tangan membentuk lingkaran besar sambil melangkah dan mengayunkan kaki mengikuti irama musik.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="./pages/seni-tari/tari_dero.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+
+                <!-- Tari -->
+                <article class="tari-card bg-white rounded-2xl p-4 shadow-sm border border-[#E8DEC9] hover:shadow-md transition-shadow group flex flex-col justify-between" data-prov="Gorontalo">
+                    <div>
+                        <div class="h-44 rounded-xl overflow-hidden mb-3.5 bg-cream-200">
+                            <img src="img/tari-polopalo.jpg" alt="Tari Sajojo Papua" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[9px] font-bold uppercase tracking-wider text-terracotta bg-cream-100 px-2 py-0.5 rounded border border-cream-300">Gorontalo</span>
+                            <button class="text-earth-subtle hover:text-terracotta text-xs"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <h3 class="font-display text-base font-bold text-earth mb-1.5 group-hover:text-terracotta transition-colors">
+                            Tari Polopalo
+                        </h3>
+                        <p class="text-[11px] text-earth-subtle leading-relaxed line-clamp-2">
+                            Kebersamaan dan keceriaan masyarakat Papua dalam hentakan tari penuh energi.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-2 border-t border-cream-100 flex items-center justify-between">
+                        <a href="./pages/seni-tari/tari_polopalo.html" class="text-[10px] font-bold text-terracotta uppercase tracking-wider hover:underline">Jelajah Sejarah</a>
+                        <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= RAGAM SEBARAN WILAYAH BUDAYA (6 REGION BOXES) ================= -->
+        <section class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16">
+            <!-- Center Header -->
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-cream-200 text-terracotta mb-2 text-sm">
+                    <i class="fa-solid fa-earth-asia"></i>
+                </div>
+                <h2 class="font-display text-3xl font-semibold text-earth tracking-tight">
+                    Ragam Sebaran Wilayah Budaya
+                </h2>
+                <p class="mt-2 text-xs sm:text-sm text-earth-subtle leading-relaxed">
+                    Peta kekayaan seni tari terbagi berdasarkan enam wilayah besar utama yang merefleksikan identitas gerak daerah.
+                </p>
+            </div>
+
+            <!-- 6 Regions Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Wilayah Sumatera -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Sumatera
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Saman</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Piring</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Tor-Tor</li>
+                    </ul>
+                </div>
+
+                <!-- Wilayah Jawa -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Jawa
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Jaipong</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Serimpi</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Reog</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Topeng</li>
+                    </ul>
+                </div>
+
+                <!-- Wilayah Kalimantan -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Kalimantan
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Gantar</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Kancet Papatai</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Mandau</li>
+                    </ul>
+                </div>
+
+                <!-- Wilayah Sulawesi -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Sulawesi
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Pakarena</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Maengket</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Pattudu</li>
+                    </ul>
+                </div>
+
+                <!-- Wilayah Bali & Nusa Tenggara -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Bali & Nusa Tenggara
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Kecak</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Pendet</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Caci</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Lego-Lego</li>
+                    </ul>
+                </div>
+
+                <!-- Wilayah Maluku & Papua -->
+                <div class="bg-white rounded-2xl p-5 border border-[#E8DEC9] shadow-2xs hover:border-terracotta transition-colors">
+                    <h3 class="font-display font-bold text-base text-earth mb-3 pb-2 border-b border-cream-200">
+                        Wilayah Maluku & Papua
+                    </h3>
+                    <ul class="space-y-2 text-xs text-earth-subtle">
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Sajojo</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Cakalele</li>
+                        <li class="flex items-center gap-2"><i class="fa-regular fa-compass text-terracotta text-[10px]"></i> Tari Yospan</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#231A14] text-cream-100 pt-16 pb-12 border-t border-[#382b22]">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+            <!-- Footer Content Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#382b22]/70">
+                <!-- Brand Column -->
+                <div class="md:col-span-6 lg:col-span-5">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="img/logo_seni_budaya.png" alt="Logo Seni Budaya Indonesia" class="w-9 h-9 object-contain rounded-full bg-white/10 p-0.5 border border-amber-600/40">
+                        <span class="font-display font-bold text-lg tracking-tight text-white">
+                            Budaya Indonesia
+                        </span>
+                    </div>
+                    <p class="text-xs text-cream-300/70 leading-relaxed max-w-sm">
+                        Dedikasi digitalisasi dan preservasi ragam warisan seni gerak tradisional dari 34 provinsi nusantara demi kejayaan peradaban masa depan.
+                    </p>
+                </div>
+
+                <!-- Nav Column 1: Kategori -->
+                <div class="md:col-span-3 lg:col-span-3 md:pl-8">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-amber-500/90 mb-4">
+                        Kategori
+                    </h3>
+                    <ul class="space-y-2.5 text-xs text-cream-300/80">
+                        <li><a href="seni-tari.html" class="hover:text-white transition-colors">Seni Tari</a></li>
+                        <li><a href="seni-musik.html" class="hover:text-white transition-colors">Seni Musik</a></li>
+                        <li><a href="rumah-adat.html" class="hover:text-white transition-colors">Rumah Adat</a></li>
+                        <li><a href="makanan-tradisional.html" class="hover:text-white transition-colors">Kuliner Tradisional</a></li>
+                    </ul>
+                </div>
+
+                <!-- Nav Column 2: Organisasi -->
+                <div class="md:col-span-3 lg:col-span-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-amber-500/90 mb-4">
+                        Organisasi
+                    </h3>
+                    <ul class="space-y-2.5 text-xs text-cream-300/80">
+                        <li><a href="index.html#tentang" class="hover:text-white transition-colors">Tentang Kami</a></li>
+                        <li><a href="index.html#tentang" class="hover:text-white transition-colors">Kontak</a></li>
+                        <li><a href="index.html#galeri" class="hover:text-white transition-colors">Galeri</a></li>
+                        <li><a href="ragam-warisan.html" class="hover:text-white transition-colors">Donasi Budaya</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-cream-300/60">
+                <p>
+                    &copy; 2026 Budaya Indonesia. Seluruh hak cipta dilindungi undang-undang.
+                </p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-cream-100 transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-cream-100 transition-colors">YouTube</a>
+                    <a href="#" class="hover:text-cream-100 transition-colors">TikTok</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Filter Script -->
+    <script>
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        const provButtons = document.querySelectorAll('.prov-btn');
+        const tariCards = document.querySelectorAll('.tari-card');
+
+        provButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                provButtons.forEach(b => {
+                    b.classList.remove('bg-[#231A14]', 'text-white');
+                    b.classList.add('bg-cream-100', 'text-earth');
+                });
+                btn.classList.add('bg-[#231A14]', 'text-white');
+                btn.classList.remove('bg-cream-100', 'text-earth');
+
+                const targetProv = btn.getAttribute('data-prov');
+
+                tariCards.forEach(card => {
+                    const cardProv = card.getAttribute('data-prov');
+                    if (targetProv === 'all' || cardProv === targetProv) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

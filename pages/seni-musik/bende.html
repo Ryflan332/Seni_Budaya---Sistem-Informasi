@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bende - Detail Seni Musik Tradisional | Budaya Indonesia</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            50: '#FDFBF7',
+                            100: '#FBF7EE',
+                            200: '#F4ECE0',
+                            300: '#E9DEC9',
+                        },
+                        terracotta: {
+                            DEFAULT: '#C05621',
+                            light: '#D97736',
+                            dark: '#9C4215',
+                        },
+                        earth: {
+                            DEFAULT: '#2B2118',
+                            dark: '#1C150E',
+                            subtle: '#6B5E51',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="bg-cream-100 text-earth antialiased selection:bg-terracotta selection:text-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="w-full pt-6 pb-4 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <a href="../../index.html" class="flex items-center gap-3 group">
+            <img src="../../img/logo_seni_budaya.png" alt="Logo Seni Budaya Indonesia" class="w-10 h-10 object-contain rounded-full shadow-sm">
+            <span class="font-display font-bold text-lg tracking-tight text-earth group-hover:text-terracotta transition-colors">
+                Budaya Indonesia
+            </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-earth/80">
+            <a href="../../index.html" class="hover:text-terracotta transition-colors">Beranda</a>
+            <a href="../../ragam-warisan.html" class="text-terracotta border-b-2 border-terracotta pb-0.5">Ragam Warisan</a>
+            <a href="../galeri/index.html" class="hover:text-terracotta transition-colors">Galeri</a>
+            <a href="../about/index.html" class="hover:text-terracotta transition-colors">About</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="flex items-center gap-4">
+            <a href="../../ragam-warisan.html" class="hidden sm:inline-flex items-center gap-2 bg-[#231A14] hover:bg-[#382b22] text-white text-[11px] font-bold tracking-widest uppercase px-5 py-2.5 rounded-md shadow-sm transition-all transform hover:-translate-y-0.5">
+                <span>Mulai Jelajah</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-earth focus:outline-none p-2" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 py-4 bg-cream-200/95 border-b border-cream-300 mx-6 rounded-xl mb-4 transition-all">
+        <nav class="flex flex-col gap-3 text-sm font-medium">
+            <a href="../../index.html" class="hover:text-terracotta text-earth/80">Beranda</a>
+            <a href="../../ragam-warisan.html" class="text-terracotta font-semibold">Ragam Warisan</a>
+            <a href="../galeri/index.html" class="hover:text-terracotta text-earth/80">Galeri</a>
+            <a href="../about/index.html" class="hover:text-terracotta text-earth/80">About</a>
+            <a href="../../ragam-warisan.html" class="mt-2 text-center bg-[#231A14] text-white text-xs font-bold py-2.5 rounded-md uppercase tracking-wider">
+                Mulai Jelajah
+            </a>
+        </nav>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-4 pb-20">
+        <!-- ================= FULL WIDTH HERO BANNER ================= -->
+        <div class="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-md border border-cream-300/80 aspect-[16/7] md:aspect-[21/8] bg-cream-200 reveal-fade-in active">
+            <img 
+                src="../../img/bende.jpg"
+                alt="Alat musik Bende dari Lampung" 
+                class="w-full h-full object-cover object-center"
+            >
+            <!-- Back Navigation Pill -->
+            <a href="../../seni-musik.html" class="absolute top-5 left-5 md:top-8 md:left-8 w-9 h-9 rounded-full bg-black/60 hover:bg-black/80 backdrop-blur-md text-white flex items-center justify-center transition-all border border-white/20 shadow" title="Kembali ke Musik Tradisional">
+                <i class="fa-solid fa-chevron-left text-xs"></i>
+            </a>
+        </div>
+
+        <!-- ================= DETAIL CONTENT SECTION ================= -->
+        <section class="mt-10 max-w-4xl reveal-fade-up">
+            <!-- Header Tag with Black Pill and Location Badge -->
+            <div class="flex items-center gap-3 mb-4">
+                <div class="bg-[#231A14] text-white px-5 py-2 rounded-full font-display font-semibold text-lg sm:text-xl shadow-sm tracking-wide">
+                    Bende
+                </div>
+                <span class="bg-[#DFD3BE] text-earth px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                    Lampung
+                </span>
+            </div>
+
+            <!-- Introductory Paragraph -->
+            <p class="text-xs sm:text-sm text-earth leading-relaxed font-medium mb-6">
+                Gong logam bermangkuk dangkal khas bumi Ruwa Jurai Lampung berdentang lantang melintasi perbukitan, sarana komunikasi warta dan pengiring kemeriahan pesta adat.
+            </p>
+
+            <!-- Detail List -->
+            <div class="space-y-6 text-xs sm:text-sm text-earth-subtle leading-relaxed border-l-2 border-terracotta/40 pl-4 py-1">
+                <!-- Cara Memainkan -->
+                <div>
+                    <h2 class="font-bold text-earth text-sm mb-2">Cara Memainkannya</h2>
+                    <p class="mb-2">
+                        Dipukul menggunakan pemukul kayu pada bagian pinggir logam yang berbentuk seperti mangkuk kecil yang dangkal.
+                    </p>
+                </div>
+
+                <!-- Asal-Usul & Kok Bisa Muncul -->
+                <div>
+                    <h2 class="font-bold text-earth text-sm mb-2">Asal-Usul & Kok Bisa Muncul</h2>
+                    <ul class="space-y-2 list-disc list-inside">
+                        <li>Dulu digunakan sebagai tanda pemberitahuan kepada warga — saat ada bahaya, pertemuan, atau waktu sholat.</li>
+                        <li>Bunyinya yang nyaring terdengar jauh di wilayah dataran tinggi Lampung sebelum ada telepon.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Center Decorative Heart -->
+            <div class="flex justify-center mt-8">
+                <button class="favorite-btn text-earth-subtle hover:text-terracotta transition-transform text-lg p-2" title="Simpan ke Favorit">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#231A14] text-cream-100 pt-16 pb-12 border-t border-[#382b22]">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#382b22]/70">
+                <div class="md:col-span-6 lg:col-span-5">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="../../img/logo_seni_budaya.png" alt="Logo Seni Budaya Indonesia" class="w-9 h-9 object-contain rounded-full bg-white/10 p-0.5 border border-amber-600/40">
+                        <span class="font-display font-bold text-lg tracking-tight text-white">Budaya Indonesia</span>
+                    </div>
+                    <p class="text-xs text-cream-300/70 leading-relaxed max-w-sm">
+                        Dedikasi digitalisasi dan preservasi ragam warisan instrumen musik tradisional nusantara demi menjaga getaran peradaban luhur bangsa.
+                    </p>
+                </div>
+
+                <div class="md:col-span-3 lg:col-span-3 md:pl-8">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-amber-500/90 mb-4">Kategori</h3>
+                    <ul class="space-y-2.5 text-xs text-cream-300/80">
+                        <li><a href="../../seni-tari.html" class="hover:text-white transition-colors">Seni Tari</a></li>
+                        <li><a href="../../seni-musik.html" class="hover:text-white transition-colors">Seni Musik</a></li>
+                        <li><a href="../../rumah-adat.html" class="hover:text-white transition-colors">Rumah Adat</a></li>
+                        <li><a href="../../makanan-tradisional.html" class="hover:text-white transition-colors">Kuliner Tradisional</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-3 lg:col-span-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-amber-500/90 mb-4">Organisasi</h3>
+                    <ul class="space-y-2.5 text-xs text-cream-300/80">
+                        <li><a href="../about/index.html" class="hover:text-white transition-colors">Tentang Kami</a></li>
+                        <li><a href="../about/index.html#kontak" class="hover:text-white transition-colors">Kontak</a></li>
+                        <li><a href="../galeri/index.html" class="hover:text-white transition-colors">Galeri</a></li>
+                        <li><a href="../../ragam-warisan.html" class="hover:text-white transition-colors">Donasi Budaya</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-cream-300/60">
+                <p>&copy; 2026 Budaya Indonesia. Seluruh hak cipta dilindungi undang-undang.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-cream-100 transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-cream-100 transition-colors">YouTube</a>
+                    <a href="#" class="hover:text-cream-100 transition-colors">TikTok</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>

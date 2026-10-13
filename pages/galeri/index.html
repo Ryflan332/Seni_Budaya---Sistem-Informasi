@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Warisan - Budaya Indonesia</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            50: '#FDFBF7',
+                            100: '#FBF7EE',
+                            200: '#F4ECE0',
+                            300: '#E9DEC9',
+                        },
+                        terracotta: {
+                            DEFAULT: '#C05621',
+                            light: '#D97736',
+                            dark: '#9C4215',
+                        },
+                        earth: {
+                            DEFAULT: '#2B2118',
+                            dark: '#1C150E',
+                            subtle: '#6B5E51',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="bg-cream-100 text-earth antialiased selection:bg-terracotta selection:text-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="w-full pt-6 pb-4 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <a href="../../index.html" class="flex items-center gap-3 group">
+            <img src="../../img/logo_seni_budaya.png" alt="Logo Seni Budaya Indonesia" class="w-10 h-10 object-contain rounded-full shadow-sm">
+            <span class="font-display font-bold text-lg tracking-tight text-earth group-hover:text-terracotta transition-colors">
+                Budaya Indonesia
+            </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-earth/80">
+            <a href="../../index.html" class="hover:text-terracotta transition-colors">Beranda</a>
+            <a href="../../ragam-warisan.html" class="hover:text-terracotta transition-colors">Ragam Warisan</a>
+            <a href="index.html" class="text-terracotta border-b-2 border-terracotta pb-0.5">Galeri</a>
+            <a href="../about/index.html" class="hover:text-terracotta transition-colors">About</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="flex items-center gap-4">
+            <a href="../../ragam-warisan.html" class="hidden sm:inline-flex items-center gap-2 bg-[#231A14] hover:bg-[#382b22] text-white text-[11px] font-bold tracking-widest uppercase px-5 py-2.5 rounded-md shadow-sm transition-all transform hover:-translate-y-0.5">
+                <span>Mulai Jelajah</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-earth focus:outline-none p-2" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 py-4 bg-cream-200/95 border-b border-cream-300 mx-6 rounded-xl mb-4 transition-all">
+        <nav class="flex flex-col gap-3 text-sm font-medium">
+            <a href="../../index.html" class="hover:text-terracotta text-earth/80">Beranda</a>
+            <a href="../../ragam-warisan.html" class="hover:text-terracotta text-earth/80">Ragam Warisan</a>
+            <a href="index.html" class="text-terracotta font-semibold">Galeri</a>
+            <a href="../about/index.html" class="hover:text-terracotta text-earth/80">About</a>
+            <a href="../../ragam-warisan.html" class="mt-2 text-center bg-[#231A14] text-white text-xs font-bold py-2.5 rounded-md uppercase tracking-wider">
+                Mulai Jelajah
+            </a>
+        </nav>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-4 pb-20">
+        <!-- ================= BREADCRUMB & HEADER ================= -->
+        <nav class="flex items-center gap-2 text-xs text-earth-subtle mb-6">
+            <a href="../../index.html" class="hover:text-terracotta transition-colors">Beranda</a>
+            <span>/</span>
+            <span class="text-earth font-medium">Galeri</span>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-10">
+            <div class="lg:col-span-8">
+                <div class="flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] text-terracotta uppercase mb-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-terracotta inline-block"></span>
+                    <span>DOKUMENTASI VISUAL</span>
+                </div>
+                <h1 class="font-display text-4xl sm:text-5xl lg:text-[56px] font-semibold text-earth leading-[1.15] tracking-tight">
+                    Galeri <span class="text-terracotta italic font-normal">Warisan</span>
+                </h1>
+                <p class="mt-3 text-earth text-base sm:text-lg font-medium">
+                    Sejuta cerita dalam setiap bingkai.
+                </p>
+            </div>
+
+            <div class="lg:col-span-4 lg:pl-6 border-l border-cream-300/80">
+                <p class="text-earth-subtle text-xs sm:text-sm leading-relaxed mb-4">
+                    Rekaman visual keabadian nusantara dari sudut pandang fotografer budaya. Menghidupkan kembali pesona tradisi yang membentang dari ufuk barat ke timur.
+                </p>
+                <a href="#koleksi" class="inline-flex items-center gap-1.5 text-xs font-bold text-terracotta uppercase tracking-wider hover:gap-2.5 transition-all">
+                    <span>Jelajahi Koleksi</span>
+                    <i class="fa-solid fa-arrow-down text-[10px]"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- ================= HERO DUAL SHOWCASE (IMAGE 2 TOP) ================= -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16 reveal-fade-up">
+            <!-- Left Wide Showcase -->
+            <div class="md:col-span-8 bg-white p-4 rounded-3xl border border-[#E8DEC9] shadow-sm">
+                <div class="relative rounded-2xl overflow-hidden aspect-[16/9] mb-4 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Ketika alam menjadi panggung: Penari tradisional menari di atas puncak Gunung Bromo saat fajar menyingsing.">
+                    <img 
+                        src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1400&q=80" 
+                        alt="Ketika alam menjadi panggung - Penari di Puncak Bromo" 
+                        class="w-full h-full object-cover"
+                    >
+                    <span class="absolute top-4 left-4 bg-white/95 text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Koleksi Utama
+                    </span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="font-display font-bold text-lg text-earth">Ketika alam menjadi panggung</h2>
+                        <p class="text-xs text-earth-subtle mt-0.5">Jawa Timur &bull; Dokumentasi Lanskap & Budaya</p>
+                    </div>
+                    <span class="text-xs text-terracotta font-semibold">Foto Seri 01</span>
+                </div>
+            </div>
+
+            <!-- Right Portrait Showcase -->
+            <div class="md:col-span-4 bg-white p-4 rounded-3xl border border-[#E8DEC9] shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="relative rounded-2xl overflow-hidden aspect-[4/3] md:aspect-[4/4] mb-4 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Jejak jemari di ujung canting: Seniman membatik dengan lilin malam di atas kain mori.">
+                        <img 
+                            src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=800&q=80" 
+                            alt="Jejak jemari di ujung canting - Batik Tulis" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <h2 class="font-display font-bold text-lg text-earth">Jejak jemari di ujung canting</h2>
+                    <p class="text-xs text-earth-subtle mt-0.5">Jawa Tengah &bull; Tradisi Kriya</p>
+                </div>
+                <span class="text-xs text-terracotta font-semibold mt-4">Foto Seri 02</span>
+            </div>
+        </section>
+
+        <!-- Small Separator -->
+        <div class="w-12 h-1 bg-cream-300 mx-auto mb-16 rounded-full"></div>
+
+        <!-- ================= FULL MASONRY / MOSAIC GALLERY (IMAGE 2 MAIN BODY) ================= -->
+        <section id="koleksi" class="space-y-6 md:space-y-8">
+            <!-- Row 1: Candi Borobudur, Penari Bali, Lanskap Awan Merapi -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6 reveal-fade-up">
+                <!-- Borobudur (col-span-5) -->
+                <div class="lg:col-span-5 h-72 sm:h-80 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Kemegahan Candi Borobudur berkabut fajar di lembah Kedu, Jawa Tengah.">
+                    <img src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=1000&q=80" alt="Candi Borobudur" class="w-full h-full object-cover">
+                </div>
+                <!-- Penari Bali (col-span-4) -->
+                <div class="lg:col-span-4 h-72 sm:h-80 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Sorot mata tajam dan keanggunan gerak penari Legong Bali.">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80" alt="Penari Bali" class="w-full h-full object-cover">
+                </div>
+                <!-- Lanskap Gunung Sunrise (col-span-3) -->
+                <div class="lg:col-span-3 h-72 sm:h-80 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Pesona fajar keemasan di atas puncak gunung nusantara.">
+                    <img src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=800&q=80" alt="Pemandangan Gunung Merapi" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Row 2: Batik Tulis close-up, Rumah Adat Tongkonan, Gugusan Pulau Raja Ampat -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6 reveal-fade-up">
+                <!-- Membatik (col-span-3) -->
+                <div class="lg:col-span-3 h-72 sm:h-80 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Ketelatenan membatik tulis canting tradisional di Surakarta.">
+                    <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80" alt="Membatik Canting" class="w-full h-full object-cover">
+                </div>
+                <!-- Rumah Tongkonan (col-span-4) -->
+                <div class="lg:col-span-4 h-72 sm:h-80 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Struktur kokoh Rumah Adat Tongkonan Toraja berlatar pepohonan hijau.">
+                    <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=900&q=80" alt="Rumah Adat Tongkonan" class="w-full h-full object-cover">
+                </div>
+                <!-- Gugusan Kepulauan Raja Ampat (col-span-5) -->
+                <div class="lg:col-span-5 h-72 sm:h-80 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Gugusan karst zamrud khatulistiwa di kepulauan Raja Ampat Papua.">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Raja Ampat Papua" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Row 3: 4 Kartu Kriya & Pertunjukan -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 reveal-fade-up">
+                <div class="h-64 md:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Kain tenun songket berbenang emas hasil rajutan pengrajin Minangkabau.">
+                    <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=700&q=80" alt="Tenun Songket" class="w-full h-full object-cover">
+                </div>
+                <div class="h-64 md:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Pentas Sendratari Ramayana di pelataran Candi Prambanan.">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=700&q=80" alt="Sendratari Ramayana" class="w-full h-full object-cover">
+                </div>
+                <div class="h-64 md:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Pondok panggung kayu di perkebunan asri Jawa Barat.">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=700&q=80" alt="Rumah Panggung Asri" class="w-full h-full object-cover">
+                </div>
+                <div class="h-64 md:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Toko kriya dan kerajinan tangan antik di pasar seni Bali.">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=700&q=80" alt="Pasar Seni Tradisional" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Row 4: Festival Pawai, Kuliner Rempah, Pengrajin Wayang -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 reveal-fade-up">
+                <!-- Pawai Budaya (col-span-6) -->
+                <div class="md:col-span-6 h-80 md:h-[420px] rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Kemeriahan pawai festival budaya adat nusantara dipadati ribuan warga.">
+                    <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1000&q=80" alt="Festival Pawai Budaya" class="w-full h-full object-cover">
+                </div>
+                <!-- Kuliner Rempah (col-span-3) -->
+                <div class="md:col-span-3 h-80 md:h-[420px] rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Kehangatan jamuan hidangan tradisional bertabur rempah nusantara.">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Sajian Rempah Tradisional" class="w-full h-full object-cover">
+                </div>
+                <!-- Pembuat Wayang (col-span-3) -->
+                <div class="md:col-span-3 h-80 md:h-[420px] rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Ketelitian pengrajin menatah kulit kerbau untuk wayang kulit purwa.">
+                    <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=800&q=80" alt="Pengrajin Tradisional" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Row 5: Gerabah Kasongan, Masjid Kuno Menara Kudus, Terasering Jatiluwih -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6 reveal-fade-up">
+                <!-- Gerabah Kasongan (col-span-3) -->
+                <div class="lg:col-span-3 h-72 sm:h-80 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Pengrajin gerabah tanah liat tradisional Kasongan Bantul.">
+                    <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80" alt="Gerabah Tradisional" class="w-full h-full object-cover">
+                </div>
+                <!-- Arsitektur Masjid Kayu (col-span-4) -->
+                <div class="lg:col-span-4 h-72 sm:h-80 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Arsitektur akulturasi budaya atap tumpang pada bangunan bersejarah nusantara.">
+                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80" alt="Arsitektur Akulturasi" class="w-full h-full object-cover">
+                </div>
+                <!-- Terasering Sawah (col-span-5) -->
+                <div class="lg:col-span-5 h-72 sm:h-80 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Sistem irigasi persawahan Subak di terasering Jatiluwih Bali.">
+                    <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1200&q=80" alt="Terasering Subak Bali" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Row 6: Koleksi Kain Adat & Penari Tunggal Tari Bali -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 reveal-fade-up">
+                <!-- Galeri Kain (col-span-5) -->
+                <div class="md:col-span-5 h-80 md:h-[400px] rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Koleksi ragam kain ikat dan tenun nusantara dengan motif khas daerah.">
+                    <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=900&q=80" alt="Koleksi Kain Tenun" class="w-full h-full object-cover">
+                </div>
+                <!-- Penari Tunggal Bali (col-span-7) -->
+                <div class="md:col-span-7 h-80 md:h-[400px] rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Dinamika ekspresif penari Bali dengan kipas di tengah panggung malam.">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80" alt="Penari Bali Ekspresif" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Row 7: 4 Kartu Detail Kriya & Seni Patung -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 reveal-fade-up">
+                <div class="h-64 md:h-72 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Camilan tradisional kerupuk dan gorengan rempah khas pasar malam.">
+                    <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=700&q=80" alt="Jajanan Tradisional" class="w-full h-full object-cover">
+                </div>
+                <div class="h-64 md:h-72 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Perhiasan perak filigri Kotagede Yogyakarta.">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80" alt="Kerajinan Perak" class="w-full h-full object-cover">
+                </div>
+                <div class="h-64 md:h-72 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Ukiran topeng kayu kuno karya pemahat tradisi nusantara.">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=700&q=80" alt="Topeng Kayu Antik" class="w-full h-full object-cover">
+                </div>
+                <div class="h-64 md:h-72 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Ibu-ibu perajin membatik bersama dalam suasana hangat paguyuban desa.">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=700&q=80" alt="Paguyuban Batik" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Row 8: Penutup Kaldera Bromo & Pesta Kembang Api Upacara Adat -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal-fade-up">
+                <div class="h-80 md:h-[450px] rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Kaldera Bromo berselimut kabut fajar dengan vegetasi cemara gunung.">
+                    <img src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=1100&q=80" alt="Kaldera Bromo Hijau" class="w-full h-full object-cover">
+                </div>
+                <div class="h-80 md:h-[450px] rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-caption="Kemeriahan perayaan upacara malam di tepi danau berlatar kembang api spektakuler.">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1100&q=80" alt="Perayaan Upacara Adat Malam" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= MODAL LIGHTBOX ================= -->
+    <div id="imageModal" class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-md items-center justify-center p-4 transition-all opacity-0 invisible">
+        <div class="relative max-w-5xl w-full flex flex-col items-center">
+            <button id="modalClose" class="absolute -top-12 right-0 text-white hover:text-amber-400 text-2xl transition-colors p-2" aria-label="Tutup Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="max-h-[80vh] overflow-hidden rounded-2xl border border-white/20 shadow-2xl">
+                <img id="modalImage" src="" alt="" class="max-h-[75vh] w-auto object-contain">
+            </div>
+            <p id="modalCaption" class="mt-4 text-cream-100 text-xs sm:text-sm text-center max-w-2xl px-4 font-medium"></p>
+        </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#231A14] text-cream-100 pt-16 pb-12 border-t border-[#382b22]">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#382b22]/70">
+                <div class="md:col-span-6 lg:col-span-5">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="../../img/logo_seni_budaya.png" alt="Logo Seni Budaya Indonesia" class="w-9 h-9 object-contain rounded-full bg-white/10 p-0.5 border border-amber-600/40">
+                        <span class="font-display font-bold text-lg tracking-tight text-white">Budaya Indonesia</span>
+                    </div>
+                    <p class="text-xs text-cream-300/70 leading-relaxed max-w-sm">
+                        Sebuah platform independen dedikasi dokumentasi foto visual kearifan lokal nusantara agar terus abadi untuk peradaban dunia.
+                    </p>
+                </div>
+
+                <div class="md:col-span-3 lg:col-span-3 md:pl-8">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-amber-500/90 mb-4">Kategori</h3>
+                    <ul class="space-y-2.5 text-xs text-cream-300/80">
+                        <li><a href="../../seni-tari.html" class="hover:text-white transition-colors">Seni Tari</a></li>
+                        <li><a href="../../seni-musik.html" class="hover:text-white transition-colors">Seni Musik</a></li>
+                        <li><a href="../../rumah-adat.html" class="hover:text-white transition-colors">Rumah Adat</a></li>
+                        <li><a href="../../makanan-tradisional.html" class="hover:text-white transition-colors">Kuliner Tradisional</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-3 lg:col-span-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-amber-500/90 mb-4">Organisasi</h3>
+                    <ul class="space-y-2.5 text-xs text-cream-300/80">
+                        <li><a href="../about/index.html" class="hover:text-white transition-colors">Tentang Kami</a></li>
+                        <li><a href="../about/index.html#kontak" class="hover:text-white transition-colors">Kontak</a></li>
+                        <li><a href="index.html" class="hover:text-white transition-colors">Galeri</a></li>
+                        <li><a href="../../ragam-warisan.html" class="hover:text-white transition-colors">Donasi Budaya</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-cream-300/60">
+                <p>&copy; 2026 Budaya Indonesia. Seluruh hak cipta dilindungi undang-undang.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-cream-100 transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-cream-100 transition-colors">YouTube</a>
+                    <a href="#" class="hover:text-cream-100 transition-colors">TikTok</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>

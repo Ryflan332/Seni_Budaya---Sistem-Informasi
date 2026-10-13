@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budaya Indonesia - Menjaga Warisan Luhur, Merawat Identitas Bangsa</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for crisp icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            50: '#FDFBF7',
+                            100: '#FBF7EE',
+                            200: '#F4ECE0',
+                            300: '#E9DEC9',
+                        },
+                        terracotta: {
+                            DEFAULT: '#C05621',
+                            light: '#D97736',
+                            dark: '#9C4215',
+                        },
+                        earth: {
+                            DEFAULT: '#2B2118',
+                            dark: '#1C150E',
+                            subtle: '#6B5E51',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-cream-100 text-earth antialiased selection:bg-terracotta selection:text-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="w-full pt-6 pb-4 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+            <img src="img/logo_seni_budaya.png" alt="Logo Seni Budaya Indonesia" class="w-23 h-12 object-contain rounded-full shadow-sm">
+            <span class="font-display font-bold text-lg tracking-tight text-earth group-hover:text-terracotta transition-colors">
+                Budaya Indonesia
+            </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-earth/80">
+            <a href="index.html" class="text-terracotta transition-colors border-b-2 border-terracotta pb-0.5">Beranda</a>
+            <a href="ragam-warisan.html" class="hover:text-terracotta transition-colors">Ragam Warisan</a>
+            <a href="pages/galeri/index.html" class="hover:text-terracotta transition-colors">Galeri</a>
+            <a href="pages/about/index.html" class="hover:text-terracotta transition-colors">About</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="flex items-center gap-4">
+            <a href="ragam-warisan.html" class="hidden sm:inline-flex items-center gap-2 bg-[#231A14] hover:bg-[#382b22] text-white text-[11px] font-bold tracking-widest uppercase px-5 py-2.5 rounded-md shadow-sm transition-all transform hover:-translate-y-0.5">
+                <span>Mulai Jelajah</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-earth focus:outline-none p-2" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 py-4 bg-cream-200/95 border-b border-cream-300 mx-6 rounded-xl mb-4 transition-all">
+        <nav class="flex flex-col gap-3 text-sm font-medium">
+            <a href="index.html" class="text-terracotta font-semibold">Beranda</a>
+            <a href="ragam-warisan.html" class="hover:text-terracotta text-earth/80">Ragam Warisan</a>
+            <a href="pages/galeri/index.html" class="hover:text-terracotta text-earth/80">Galeri</a>
+            <a href="pages/about/index.html" class="hover:text-terracotta text-earth/80">About</a>
+            <a href="ragam-warisan.html" class="mt-2 text-center bg-[#231A14] text-white text-xs font-bold py-2.5 rounded-md uppercase tracking-wider">
+                Mulai Jelajah
+            </a>
+        </nav>
+    </div>
+
+    <main id="beranda">
+        <!-- ================= HERO SECTION ================= -->
+        <section class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-8 pb-16">
+            <!-- Header Grid: Title & Stats -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-10">
+                <!-- Left: Headline -->
+                <div class="lg:col-span-8">
+                    <div class="flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] text-terracotta uppercase mb-4">
+                        <span>WARISAN BUDAYA</span>
+                        <div class="w-8 h-[1.5px] bg-terracotta/50"></div>
+                    </div>
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-[54px] font-semibold text-earth leading-[1.18] tracking-tight">
+                        Menjaga Warisan Luhur,<br class="hidden sm:inline">
+                        Merawat Identitas <span class="text-terracotta font-normal italic">Bangsa</span>
+                    </h1>
+                    <p class="mt-4 text-earth-subtle text-sm md:text-base font-normal max-w-2xl leading-relaxed">
+                        Pentingnya menjaga keluhuran budaya sebagai jati diri bangsa Indonesia.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="mt-8 flex flex-wrap items-center gap-4">
+                        <a href="#ragam-budaya" class="inline-flex items-center justify-center bg-[#231A14] hover:bg-[#382b22] text-white text-xs font-bold tracking-widest uppercase px-6 py-3.5 rounded-md shadow transition-all">
+                            Jelajah Sekarang
+                        </a>
+                        <a href="#tentang" class="inline-flex items-center justify-center bg-transparent hover:bg-cream-200 border border-earth/20 text-earth text-xs font-bold tracking-widest uppercase px-6 py-3.5 rounded-md transition-all">
+                            Tentang Kami
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Stats -->
+                <div class="lg:col-span-4 lg:pl-8 border-l border-cream-300/80">
+                    <div class="flex flex-col">
+                        <span class="font-display text-4xl sm:text-5xl font-semibold text-terracotta tracking-tight">
+                            4.795
+                        </span>
+                        <h2 class="mt-1 font-bold text-earth text-sm">
+                            Budaya Di Indonesia
+                        </h2>
+                        <p class="mt-2 text-earth-subtle text-xs leading-relaxed">
+                            Keberagaman budaya tradisional tercatat di seluruh pelosok nusantara, menjadi kekayaan tak ternilai yang mengakar sebagai kebanggaan kita bersama.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Big Panoramic Landscape Image -->
+            <div class="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-lg border border-cream-300/60 aspect-[16/7] md:aspect-[21/8]">
+                <img 
+                    src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=2000&q=80" 
+                    alt="Pemandangan Megah Gunung Bromo Indonesia di Atas Awan saat Mentari Pagi"
+                    class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out"
+                >
+                <!-- Subtle warm overlay gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10 pointer-events-none"></div>
+            </div>
+        </section>
+
+        <!-- ================= RAGAM SOSIAL BUDAYA SECTION ================= -->
+        <section id="ragam-budaya" class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-12">
+            <!-- Section Header -->
+            <div class="mb-10">
+                <div class="flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] text-terracotta uppercase mb-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-terracotta inline-block"></span>
+                    <span>RAGAM BUDAYA</span>
+                </div>
+                <h2 class="font-display text-3xl sm:text-4xl font-semibold text-earth tracking-tight">
+                    Ragam Sosial Budaya Indonesia
+                </h2>
+                <p class="mt-3 text-earth-subtle text-sm max-w-3xl leading-relaxed">
+                    Pesona seni pertunjukan, ritme gamelan nan sakral, keelokan arsitektur rumah adat, serta cita rasa tradisi kuliner warisan leluhur nusantara.
+                </p>
+            </div>
+
+            <!-- Cards Grid (4 items) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1: Tari Tradisional -->
+                <article class="bg-white rounded-2xl p-4 shadow-sm border border-[#EBE4D5] hover:shadow-md transition-shadow group flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-cream-200">
+                            <img 
+                                src="./img/tari.png" 
+                                alt="Tari Tradisional Bali" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            >
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-terracotta block mb-1">
+                            Seni Tari
+                        </span>
+                        <h3 class="font-display text-lg font-bold text-earth mb-2 group-hover:text-terracotta transition-colors">
+                            Tari Tradisional
+                        </h3>
+                        <p class="text-xs text-earth-subtle leading-relaxed line-clamp-3">
+                            Seni tari nusantara merefleksikan filosofi mendalam, ritme sakral, serta ekspresi estetika keanggunan budaya dari Sabang hingga Merauke.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-2">
+                        <a href="seni-tari.html" class="inline-flex items-center gap-1.5 text-[11px] font-bold text-terracotta uppercase tracking-wider hover:gap-2.5 transition-all">
+                            <span>Pelajari Lebih</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 2: Seni Musik -->
+                <article class="bg-white rounded-2xl p-4 shadow-sm border border-[#EBE4D5] hover:shadow-md transition-shadow group flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-cream-200">
+                            <img 
+                                src="img/seni musik .jpg" 
+                                alt="Alat Musik Tradisional Gamelan" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            >
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-terracotta block mb-1">
+                            Seni Musik
+                        </span>
+                        <h3 class="font-display text-lg font-bold text-earth mb-2 group-hover:text-terracotta transition-colors">
+                            Seni Musik
+                        </h3>
+                        <p class="text-xs text-earth-subtle leading-relaxed line-clamp-3">
+                            Alunan harmonis gending gamelan, angklung, dan sasando yang sarat akan makna spiritual dan mengiringi ritual sakral kehidupan.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-2">
+                        <a href="seni-musik.html" class="inline-flex items-center gap-1.5 text-[11px] font-bold text-terracotta uppercase tracking-wider hover:gap-2.5 transition-all">
+                            <span>Pelajari Lebih</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 3: Rumah Adat -->
+                <article class="bg-white rounded-2xl p-4 shadow-sm border border-[#EBE4D5] hover:shadow-md transition-shadow group flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-cream-200">
+                            <img 
+                                src="img/rumah.jpg" 
+                                alt="Keahlian Menenun dan Kerajinan Rumah Adat" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            >
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-terracotta block mb-1">
+                            Arsitektur
+                        </span>
+                        <h3 class="font-display text-lg font-bold text-earth mb-2 group-hover:text-terracotta transition-colors">
+                            Rumah Adat
+                        </h3>
+                        <p class="text-xs text-earth-subtle leading-relaxed line-clamp-3">
+                            Kekayaan arsitektur vernakular adat nusantara yang memadukan keharmonisan dengan alam raya dan ketangguhan struktur tradisional.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-2">
+                        <a href="rumah-adat.html" class="inline-flex items-center gap-1.5 text-[11px] font-bold text-terracotta uppercase tracking-wider hover:gap-2.5 transition-all">
+                            <span>Pelajari Lebih</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 4: Makanan Tradisional -->
+                <article class="bg-white rounded-2xl p-4 shadow-sm border border-[#EBE4D5] hover:shadow-md transition-shadow group flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square rounded-xl overflow-hidden mb-4 bg-cream-200">
+                            <img 
+                                src="img/makanan.png" 
+                                alt="Sajian Kuliner Makanan Tradisional Nusantara" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            >
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-terracotta block mb-1">
+                            Kuliner
+                        </span>
+                        <h3 class="font-display text-lg font-bold text-earth mb-2 group-hover:text-terracotta transition-colors">
+                            Makanan Tradisional
+                        </h3>
+                        <p class="text-xs text-earth-subtle leading-relaxed line-clamp-3">
+                            Warisan rempah-rempah yang meracik kekayaan cita rasa autentik dan filosofi rasa syukur dalam kebersamaan masyarakat nusantara.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-2">
+                        <a href="makanan-tradisional.html" class="inline-flex items-center gap-1.5 text-[11px] font-bold text-terracotta uppercase tracking-wider hover:gap-2.5 transition-all">
+                            <span>Pelajari Lebih</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= QUOTE / FILOSOFI SECTION ================= -->
+        <section class="max-w-4xl mx-auto px-6 py-20 text-center">
+            <!-- Decorative Quote Mark -->
+            <div class="font-serif text-5xl md:text-6xl text-terracotta/70 mb-4 select-none">
+                &ldquo;
+            </div>
+            
+            <!-- Quote Text -->
+            <blockquote class="font-display text-xl sm:text-2xl md:text-3xl text-earth font-medium leading-relaxed md:leading-[1.6]">
+                Budaya bukan sekadar mengalir di urat nadi,<br class="hidden sm:inline">
+                bukan pula warisan mati yang berdiam sepi.<br>
+                Ia menjelma hidangan hangat di meja hari ini,<br>
+                <span class="text-terracotta font-semibold">
+                    ketika nurani paham, cinta memeluk, dan raga merawatnya penuh arti.
+                </span>
+            </blockquote>
+
+            <!-- Author Signature -->
+            <cite class="mt-8 block text-[11px] md:text-xs font-bold uppercase tracking-[0.25em] text-earth/80 not-italic">
+                &mdash; BUDAYA NUSANTARA
+            </cite>
+        </section>
+
+        <!-- ================= LENSA BUDAYA KITA (GALERI) ================= -->
+        <section id="galeri" class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-8 pb-24">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] text-terracotta uppercase mb-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-terracotta inline-block"></span>
+                    <span>GALERI NUSANTARA</span>
+                </div>
+                <h2 class="font-display text-3xl sm:text-4xl font-semibold text-earth tracking-tight">
+                    Lensa Budaya Kita
+                </h2>
+                <p class="mt-3 text-earth-subtle text-sm leading-relaxed">
+                    Sebuah karya seni visual dan keindahan abadi nusantara yang merekam pesona tradisi dan peradaban luhur bangsa.
+                </p>
+            </div>
+
+            <!-- Gallery Grid Layout (2 Distinct Rows with Clean Spacing) -->
+            <div class="space-y-6 md:space-y-8">
+                <!-- Baris 1: Candi Borobudur & Penari Bali -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                    <!-- Image 1: Borobudur Temple Sunrise (Wide) -->
+                    <div class="md:col-span-7 h-64 sm:h-80 md:h-[350px] lg:h-[380px] rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-[#E6DCC8] group bg-cream-200">
+                        <img 
+                            src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=1200&q=80" 
+                            alt="Candi Borobudur Berselimut Kabut Pagi" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        >
+                    </div>
+
+                    <!-- Image 2: Penari Bali (Landscape / Medium) -->
+                    <div class="md:col-span-5 h-64 sm:h-80 md:h-[350px] lg:h-[380px] rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-[#E6DCC8] group bg-cream-200">
+                        <img 
+                            src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=80" 
+                            alt="Potret Keanggunan Penari Tradisional Bali dengan Pakaian Adat Lengkap" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        >
+                    </div>
+                </div>
+
+                <!-- Baris 2: Pengrajin Batik & Rumah Adat -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
+                    <!-- Image 3: Membatik Tulis (Detail Process) -->
+                    <div class="md:col-span-5 h-64 sm:h-80 md:h-[350px] lg:h-[380px] rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-[#E6DCC8] group bg-cream-200">
+                        <img 
+                            src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=1000&q=80" 
+                            alt="Pengrajin Membatik Tulis Canting dengan Motif Khas Nusantara" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        >
+                    </div>
+
+                    <!-- Image 4: Rumah Adat Tongkonan Toraja (Wide / Landscape) -->
+                    <div class="md:col-span-7 h-64 sm:h-80 md:h-[350px] lg:h-[380px] rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-[#E6DCC8] group bg-cream-200">
+                        <img 
+                            src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80" 
+                            alt="Keindahan Rumah Adat Tongkonan Toraja di Tengah Asrinya Alam Pegunungan" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="tentang" class="bg-[#231A14] text-cream-100 pt-16 pb-12 border-t border-[#382b22]">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+            <!-- Footer Content Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#382b22]/70">
+                <!-- Brand Column -->
+                <div class="md:col-span-6 lg:col-span-5">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="img/logo_seni_budaya.png" alt="Logo Seni Budaya Indonesia" class="w-9 h-9 object-contain rounded-full bg-white/10 p-0.5 border border-amber-600/40">
+                        <span class="font-display font-bold text-lg tracking-tight text-white">
+                            Budaya Indonesia
+                        </span>
+                    </div>
+                    <p class="text-xs text-cream-300/70 leading-relaxed max-w-sm">
+                        Sebuah platform independen dedikasi pelestarian nilai, ragam, dan kearifan lokal nusantara agar terus lestari dan menyinari peradaban generasi penerus bangsa.
+                    </p>
+                </div>
+
+                <!-- Nav Column 1: Tautan -->
+                <div class="md:col-span-3 lg:col-span-3 md:pl-8">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-amber-500/90 mb-4">
+                        Tautan
+                    </h3>
+                    <ul class="space-y-2.5 text-xs text-cream-300/80">
+                        <li><a href="#beranda" class="hover:text-white transition-colors">Beranda</a></li>
+                        <li><a href="#ragam-budaya" class="hover:text-white transition-colors">Ragam Budaya</a></li>
+                        <li><a href="#galeri" class="hover:text-white transition-colors">Lensa Visual</a></li>
+                        <li><a href="#tentang" class="hover:text-white transition-colors">Tentang Kami</a></li>
+                    </ul>
+                </div>
+
+                <!-- Nav Column 2: Kategori -->
+                <div class="md:col-span-3 lg:col-span-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-amber-500/90 mb-4">
+                        Kategori
+                    </h3>
+                    <ul class="space-y-2.5 text-xs text-cream-300/80">
+                        <li><a href="#ragam-budaya" class="hover:text-white transition-colors">Tari Tradisional</a></li>
+                        <li><a href="#ragam-budaya" class="hover:text-white transition-colors">Musik & Gamelan</a></li>
+                        <li><a href="#ragam-budaya" class="hover:text-white transition-colors">Arsitektur Adat</a></li>
+                        <li><a href="#ragam-budaya" class="hover:text-white transition-colors">Kuliner Tradisional</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-cream-300/60">
+                <p>
+                    &copy; 2026 Budaya Indonesia. Seluruh hak cipta dilindungi undang-undang.
+                </p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-cream-100 transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-cream-100 transition-colors">Facebook</a>
+                    <a href="#" class="hover:text-cream-100 transition-colors">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
