@@ -320,52 +320,910 @@
                 </p>
             </div>
 
-            <!-- Gallery Grid Layout (2 Distinct Rows with Clean Spacing) -->
-            <div class="space-y-6 md:space-y-8">
-                <!-- Baris 1: Candi Borobudur & Penari Bali -->
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
-                    <!-- Image 1: Borobudur Temple Sunrise (Wide) -->
-                    <div class="md:col-span-7 h-64 sm:h-80 md:h-[350px] lg:h-[380px] rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-[#E6DCC8] group bg-cream-200">
-                        <img 
-                            src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=1200&q=80" 
-                            alt="Candi Borobudur Berselimut Kabut Pagi" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                        >
-                    </div>
+            <!-- Filter Kategori Galeri -->
+            <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-10">
+                <button type="button" class="gallery-filter-btn bg-[#231A14] text-white shadow px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase transition-all transform hover:-translate-y-0.5" data-filter="all">
+                    Semua Koleksi (61)
+                </button>
+                <button type="button" class="gallery-filter-btn bg-white hover:bg-cream-200 text-earth border border-[#E8DEC9] px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase transition-all transform hover:-translate-y-0.5" data-filter="tari">
+                    <i class="fa-solid fa-person-walking mr-1.5 text-terracotta"></i> Seni Tari (14)
+                </button>
+                <button type="button" class="gallery-filter-btn bg-white hover:bg-cream-200 text-earth border border-[#E8DEC9] px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase transition-all transform hover:-translate-y-0.5" data-filter="musik">
+                    <i class="fa-solid fa-music mr-1.5 text-terracotta"></i> Seni Musik (15)
+                </button>
+                <button type="button" class="gallery-filter-btn bg-white hover:bg-cream-200 text-earth border border-[#E8DEC9] px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase transition-all transform hover:-translate-y-0.5" data-filter="rumah">
+                    <i class="fa-solid fa-house-chimney mr-1.5 text-terracotta"></i> Rumah Adat (14)
+                </button>
+                <button type="button" class="gallery-filter-btn bg-white hover:bg-cream-200 text-earth border border-[#E8DEC9] px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase transition-all transform hover:-translate-y-0.5" data-filter="makanan">
+                    <i class="fa-solid fa-utensils mr-1.5 text-terracotta"></i> Makanan Tradisional (18)
+                </button>
+            </div>
 
-                    <!-- Image 2: Penari Bali (Landscape / Medium) -->
-                    <div class="md:col-span-5 h-64 sm:h-80 md:h-[350px] lg:h-[380px] rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-[#E6DCC8] group bg-cream-200">
-                        <img 
-                            src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=80" 
-                            alt="Potret Keanggunan Penari Tradisional Bali dengan Pakaian Adat Lengkap" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                        >
+            <!-- Unified Responsive Gallery Grid (All 61 Items) -->
+            <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+                <!-- ===== SENI TARI (14 ITEMS) ===== -->
+                <!-- 1. Tari Kecak -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="tari" data-caption="Tari Kecak &bull; Bali: Tarian sakral khas Bali yang menceritakan fragmen epik Ramayana diiringi paduan suara vokal dinamis puluhan penari pria yang melingkar khidmat.">
+                    <img src="img/tari_kecak.jpg" alt="Tari Kecak" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-person-walking text-terracotta mr-1"></i> Tari &bull; Bali
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Tari Kecak</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Pertunjukan dramatis sakral paduan vokal puluhan penari pria bertema Ramayana.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Baris 2: Pengrajin Batik & Rumah Adat -->
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
-                    <!-- Image 3: Membatik Tulis (Detail Process) -->
-                    <div class="md:col-span-5 h-64 sm:h-80 md:h-[350px] lg:h-[380px] rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-[#E6DCC8] group bg-cream-200">
-                        <img 
-                            src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=1000&q=80" 
-                            alt="Pengrajin Membatik Tulis Canting dengan Motif Khas Nusantara" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                        >
-                    </div>
-
-                    <!-- Image 4: Rumah Adat Tongkonan Toraja (Wide / Landscape) -->
-                    <div class="md:col-span-7 h-64 sm:h-80 md:h-[350px] lg:h-[380px] rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-[#E6DCC8] group bg-cream-200">
-                        <img 
-                            src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80" 
-                            alt="Keindahan Rumah Adat Tongkonan Toraja di Tengah Asrinya Alam Pegunungan" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                        >
+                <!-- 2. Tari Jaipong -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="tari" data-caption="Tari Jaipong &bull; Jawa Barat: Tari pergaulan modern berakar tradisi Sunda dengan ketukan kendang rancak dan gerakan energik yang memikat hati.">
+                    <img src="img/tari_jaepong.jpg" alt="Tari Jaipong" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-person-walking text-terracotta mr-1"></i> Tari &bull; Jawa Barat
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Tari Jaipong</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Tari pergaulan khas Sunda dengan gerakan lincah dan ketukan kendang yang rancak.</p>
+                        </div>
                     </div>
                 </div>
+
+                <!-- 3. Tari Piring -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="tari" data-caption="Tari Piring &bull; Sumatera Barat: Tarian atraktif Minangkabau mengayunkan piring porselen di kedua telapak tangan dengan kecepatan tinggi bahkan menari di atas pecahan piring.">
+                    <img src="img/tari_piring.jpg" alt="Tari Piring" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-person-walking text-terracotta mr-1"></i> Tari &bull; Sumbar
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Tari Piring</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Tarian atraktif Minangkabau mengayunkan piring diiringi tabuhan talempong.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Tari Serimpi -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="tari" data-caption="Tari Serimpi &bull; D.I. Yogyakarta: Tarian klasik keraton Mataram Islam yang ditarikan empat putri dengan keanggunan gerak gemulai melambangkan kesucian dan keluhuran budi pekerti.">
+                    <img src="img/tari_serimpi.jpg" alt="Tari Serimpi" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-person-walking text-terracotta mr-1"></i> Tari &bull; D.I. Yogyakarta
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Tari Serimpi</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Tarian klasik putri keraton yang anggun dan sarat kehalusan budi pekerti luhur.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Tari Gong -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="tari" data-caption="Tari Gong &bull; Kalimantan Timur: Tarian khas suku Dayak Kenyah di mana seorang gadis menari lemah gemulai di atas sebuah gong perunggu melambangkan keseimbangan hidup.">
+                    <img src="img/tari_gong.jpg" alt="Tari Gong" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-person-walking text-terracotta mr-1"></i> Tari &bull; Kaltim
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Tari Gong</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Kelembutan tari gadis suku Dayak Kenyah yang menari di atas gong perunggu.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Tari Sajojo -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="tari" data-caption="Tari Sajojo &bull; Papua: Tarian pergaulan suku Papua yang energik dan ceria dengan lompatan dan langkah kaki lincah sebagai wujud kebersamaan serta kehangatan persaudaraan.">
+                    <img src="img/Tarian-Sajojo.jpg" alt="Tari Sajojo" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-person-walking text-terracotta mr-1"></i> Tari &bull; Papua
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Tari Sajojo</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Tarian pergaulan khas Papua yang penuh keceriaan, kehangatan, dan persaudaraan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Tari Cokek -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="tari" data-caption="Tari Cokek &bull; DKI Jakarta: Tarian akulturasi budaya Betawi dan Tionghoa diiringi musik Gambang Kromong dengan ciri khas gerakan mengalungkan selendang.">
+                    <img src="img/tari-cokek.jpg" alt="Tari Cokek" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-person-walking text-terracotta mr-1"></i> Tari &bull; Jakarta
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Tari Cokek</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Tarian pergaulan akulturasi Betawi-Tionghoa beriring alunan Gambang Kromong.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Tari Dero -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="tari" data-caption="Tari Dero &bull; Sulawesi Tengah: Tarian massal melingkar suku Pamona di Poso untuk merayakan panen raya atau hari besar adat, mencerminkan persatuan tanpa memandang kasta.">
+                    <img src="img/tari-dero.JPG" alt="Tari Dero" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-person-walking text-terracotta mr-1"></i> Tari &bull; Sulteng
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Tari Dero</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Tarian melingkar massal suku Pamona Poso peraya syukur panen dan kerukunan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Tari Jepin -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="tari" data-caption="Tari Jepin &bull; Kalimantan Barat: Tarian bernuansa Melayu Islam yang berkembang di pesisir sungai Kapuas, kaya akan kesantunan dan irama ketukan rebana yang memikat.">
+                    <img src="img/tari-jepin.jpg" alt="Tari Jepin" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-person-walking text-terracotta mr-1"></i> Tari &bull; Kalbar
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Tari Jepin</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Tarian santun rumpun Melayu pesisir Kalimantan Barat dengan alunan rebana.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Tari Lenso -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="tari" data-caption="Tari Lenso &bull; Maluku: Tarian penyambutan dan pergaulan muda-mudi di Maluku menggunakan sapu tangan putih (lenso) sebagai simbol keterbukaan dan ketulusan hati.">
+                    <img src="img/tari-lenso.jpg" alt="Tari Lenso" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-person-walking text-terracotta mr-1"></i> Tari &bull; Maluku
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Tari Lenso</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Tarian pergaulan Maluku berlambang sapu tangan putih lambang ketulusan hati.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. Tari Polopalo -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="tari" data-caption="Tari Polopalo &bull; Gorontalo: Tarian pergaulan masyarakat Gorontalo di mana para penari memegang alat musik bambu bernama polopalo dan memainkannya selaras gerak kaki.">
+                    <img src="img/tari-polopalo.jpg" alt="Tari Polopalo" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-person-walking text-terracotta mr-1"></i> Tari &bull; Gorontalo
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Tari Polopalo</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Tarian pergaulan Gorontalo dengan ketukan ritmis alat musik bambu polopalo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12. Tari Zapin -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="tari" data-caption="Tari Zapin &bull; Riau: Tari rumpun Melayu bernafaskan Islam dengan langkah kaki berpola indah sarat nilai adab, budi pekerti, dan kepiawaian langkah kaki penari.">
+                    <img src="img/tari-zapin.jpg" alt="Tari Zapin" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-person-walking text-terracotta mr-1"></i> Tari &bull; Riau
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Tari Zapin</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Tari Melayu pesisir berakar budaya Islam yang sarat keanggunan langkah dan adab.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 13. Tari Nusantara Banner -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="tari" data-caption="Pesona Seni Tari Nusantara: Ragam keelokan busana, mahkota emas, dan ekspresi gerak tubuh penari tradisional dalam melestarikan titipan adiluhung leluhur bangsa.">
+                    <img src="img/tari.png" alt="Seni Tari Tradisional Nusantara" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-person-walking text-terracotta mr-1"></i> Tari &bull; Nusantara
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Pesona Tari Nusantara</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Dokumentasi keindahan kostum emas dan ekspresi agung seni tari nusantara.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 14. Maestro Penari Utama -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="tari" data-caption="Maestro Penari Bali: Sorot mata tajam (seledet) dan keagungan sikap tubuh penari Bali dalam menghidupkan kisah spiritual dan persembahan suci di pelataran pura.">
+                    <img src="img/utama.jpg" alt="Penari Bali Agung" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-person-walking text-terracotta mr-1"></i> Tari &bull; Bali
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Maestro Tari Bali</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Ekspresi gerak sakral dan tatapan tajam memukau penari agung pulau dewata.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== SENI MUSIK (15 ITEMS) ===== -->
+                <!-- 15. Angklung -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="musik" data-caption="Angklung &bull; Jawa Barat: Instrumen musik bambu multitonal khas Sunda yang diakui UNESCO sebagai Warisan Budaya Takbenda Dunia atas filosofi harmoni kebersamaannya.">
+                    <img src="img/angklung.jpg" alt="Angklung Jawa Barat" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-music text-terracotta mr-1"></i> Musik &bull; Jabar
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Angklung</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Alat musik bambu multitonal kebanggaan Sunda yang mendunia diakui UNESCO.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 16. Aramba -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="musik" data-caption="Aramba &bull; Nias, Sumatera Utara: Gong kecil berbahan perunggu yang ditabuh dalam upacara adat pernikahan agung dan pemanggilan para tetua adat di kepulauan Nias.">
+                    <img src="img/aramba.jpg" alt="Aramba Nias" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-music text-terracotta mr-1"></i> Musik &bull; Nias, Sumut
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Aramba</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Gong perunggu sakral masyarakat Nias pengiring pesta adat dan kehormatan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 17. Bende -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="musik" data-caption="Bende &bull; Lampung: Gong kuno berukuran sedang yang dahulu berfungsi sebagai tanda maklumat raja kepada rakyat dan kini menjadi pengiring ansambel musik adat Lampung.">
+                    <img src="img/bende.jpg" alt="Bende Lampung" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-music text-terracotta mr-1"></i> Musik &bull; Lampung
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Bende</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Gong perunggu penanda titah leluhur dan pengiring musik adat masyarakat Lampung.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 18. Gambus -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="musik" data-caption="Gambus &bull; Riau: Instrumen petik berleher pendek dari kayu berciri khas Melayu yang mengalunkan melodi syahdu pengiring tari zapin dan lantunan syair hikmah.">
+                    <img src="img/gambus.jpg" alt="Gambus Riau" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-music text-terracotta mr-1"></i> Musik &bull; Riau
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Gambus</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Alat musik petik khas Melayu pengiring lantunan syair dan tarian zapin.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 19. Gendang Beleq -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="musik" data-caption="Gendang Beleq &bull; Lombok, NTB: Gendang besar suku Sasak yang ditabuh berpasangan (mama & mina) oleh para pemain berbusana adat lengkap dengan formasi atraktif.">
+                    <img src="img/gendang-beleq.jpg" alt="Gendang Beleq Sasak" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-music text-terracotta mr-1"></i> Musik &bull; NTB
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Gendang Beleq</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Gendang raksasa kebanggaan suku Sasak pengobar semangat kesatria dan perayaan adat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 20. Gondang Sabangunan -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="musik" data-caption="Gondang Sabangunan &bull; Sumatera Utara: Ansambel musik sakral suku Batak Toba terdiri dari taganing, sarune, ogung, dan hesek pengiring ritual adat horja dan mangalahat horbo.">
+                    <img src="img/Gondang.jpg" alt="Gondang Sabangunan Batak" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-music text-terracotta mr-1"></i> Musik &bull; Sumut
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Gondang Sabangunan</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Ansambel tabuhan sakral Batak Toba perantara doa dan rasa syukur upacara adat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 21. Karinding -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="musik" data-caption="Karinding &bull; Jawa Barat: Alat musik getar bambu/pelepah enau kuno masyarakat Sunda yang dimainkan dengan ketukan jari dan rongga mulut sebagai resonator gaung alaminya.">
+                    <img src="img/karinding.jpg" alt="Karinding Sunda" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-music text-terracotta mr-1"></i> Musik &bull; Jabar
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Karinding</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Alat musik getar bambu purba Sunda peredam hama sawah dan penyampai rasa jiwa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 22. Kolintang -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="musik" data-caption="Kolintang &bull; Sulawesi Utara: Alat musik perkusi bilah kayu waru atau cempaka khas Minahasa yang menghasilkan jangkauan nada melodis orkestra yang merdu dan dinamis.">
+                    <img src="img/kolintang.jpg" alt="Kolintang Minahasa" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-music text-terracotta mr-1"></i> Musik &bull; Sulut
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Kolintang</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Bilah kayu merdu karya tradisi Minahasa pembawa harmoni orkestra nusantara.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 23. Sape -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="musik" data-caption="Sape &bull; Kalimantan: Alat musik petik kayu adau berukir khas suku Dayak Kayaan dan Kenyah yang mengalunkan nada teduh menentramkan jiwa laksana gemerisik rimba Borneo.">
+                    <img src="img/sape.jpg" alt="Sape Dayak Kalimantan" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-music text-terracotta mr-1"></i> Musik &bull; Kalimantan
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Sape</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Petikan dawai kayu berukir Dayak yang melantunkan nada teduh kedamaian rimba.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 24. Sasando -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="musik" data-caption="Sasando &bull; Pulau Rote, NTT: Mahakarya alat musik dawai dari tabung bambu yang dibalut anyaman daun lontar menghasilkan denting surgawi yang memukau dunia.">
+                    <img src="img/sasando.jpg" alt="Sasando Pulau Rote" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-music text-terracotta mr-1"></i> Musik &bull; NTT
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Sasando</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Instrumen dawai berresonator daun lontar khas Pulau Rote bergaung syahdu menawan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 25. Serune Kalee -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="musik" data-caption="Serune Kalee &bull; Aceh: Alat musik tiup kayu berlubang khas masyarakat Aceh yang ditiup dengan teknik pernapasan bersambung pengiring tari seudati dan penyambutan tamu terhormat.">
+                    <img src="img/serenu.png" alt="Serune Kalee Aceh" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-music text-terracotta mr-1"></i> Musik &bull; Aceh
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Serune Kalee</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Alat musik tiup tradisional Aceh peniup melodi lantang pengiring upacara.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 26. Talempong -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="musik" data-caption="Talempong &bull; Sumatera Barat: Gong kecil berpencon berbahan kuningan khas Minangkabau yang dimainkan dengan teknik interlock (pacik) menghasilkan ketukan riang semarak.">
+                    <img src="img/Talempong.jpg" alt="Talempong Minangkabau" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-music text-terracotta mr-1"></i> Musik &bull; Sumbar
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Talempong</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Gong kecil berpencon Minangkabau bertempo rancak pengiring arak-arakan adat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 27. Tifa -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="musik" data-caption="Tifa &bull; Papua & Maluku: Kendang kayu bulat panjang beralas kulit biawak atau rusa berukir motif leluhur, menjadi detak jantung ritual dan pengiring tarian suku-suku timur.">
+                    <img src="img/tifa.jpg" alt="Tifa Papua dan Maluku" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-music text-terracotta mr-1"></i> Musik &bull; Papua & Maluku
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Tifa</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Gendang kayu beralaskan kulit rusa penabuh ritme sakral tari dan pesta adat timur.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 28. Gamelan Nusantara -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="musik" data-caption="Harmoni Gamelan Nusantara: Ansambel perunggu berpadu gong, kendang, dan saron yang memadukan kehalusan rasa spiritual dan kebersamaan komunal suku-suku bangsa.">
+                    <img src="img/seni musik .jpg" alt="Gamelan Nusantara" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-music text-terracotta mr-1"></i> Musik &bull; Jawa & Bali
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Gamelan Jawa & Bali</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Perpaduan laras pelog dan slendro ansambel gamelan yang menenangkan batin.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 29. Orkestra Tradisional -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="musik" data-caption="Orkestra Musik Tradisional: Dokumentasi penampilan megah orkestra budaya nusantara memadukan rebab, suling bambu, gong ageng, dan tetabuhan perkusi adiluhung.">
+                    <img src="img/utama-musik.jpg" alt="Ansambel Musik Tradisional" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-music text-terracotta mr-1"></i> Musik &bull; Nusantara
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Ansambel Orkestra Agung</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Pementasan akbar instrumen tradisional dalam simfoni agung nusantara.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== RUMAH ADAT (14 ITEMS) ===== -->
+                <!-- 30. Rumah Baileo -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="rumah" data-caption="Rumah Baileo &bull; Maluku: Balai musyawarah adat terbuka tempat berkumpulnya pemangku adat dan penyimpanan benda keramat peninggalan leluhur suku-suku di Maluku.">
+                    <img src="img/rumah-baileo.jpg" alt="Rumah Baileo Maluku" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-house-chimney text-terracotta mr-1"></i> Rumah Adat &bull; Maluku
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Rumah Baileo</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Balai musyawarah adat terbuka suku Maluku penjaga memori suci para leluhur.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 31. Rumah Bolon -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="rumah" data-caption="Rumah Bolon &bull; Sumatera Utara: Rumah panggung megah raja-raja Batak Toba berhias ornamen gorga tiga warna (putih, merah, hitam) sebagai tolak bala dan lambang kejayaan.">
+                    <img src="img/rumah-bolon.jpg" alt="Rumah Bolon Batak" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-house-chimney text-terracotta mr-1"></i> Rumah Adat &bull; Sumut
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Rumah Bolon</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Rumah panggung megah raja Batak Toba berhias ornamen ukir gorga sarat filosofi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 32. Rumah Boyang -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="rumah" data-caption="Rumah Boyang &bull; Sulawesi Barat: Rumah panggung kayu khas suku Mandar bertiang tidak ditanam ke tanah melainkan bertumpu pada batu datar, tahan gempa dan adaptif pesisir.">
+                    <img src="img/rumah-boyang.jpg" alt="Rumah Boyang Mandar" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-house-chimney text-terracotta mr-1"></i> Rumah Adat &bull; Sulbar
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Rumah Boyang</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Arsitektur panggung kayu suku Mandar dengan ornamen tumbaq layar di bubungan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 33. Rumah Gadang -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="rumah" data-caption="Rumah Gadang &bull; Sumatera Barat: Mahakarya arsitektur Minangkabau beratap gonjong menjulang laksana tanduk kerbau, dibangun tanpa paku besi dan tahan getaran gempa bumi.">
+                    <img src="img/rumah-gadang.jpg" alt="Rumah Gadang Minangkabau" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-house-chimney text-terracotta mr-1"></i> Rumah Adat &bull; Sumbar
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Rumah Gadang</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Arsitektur vernakular Minangkabau beratap gonjong tanduk kerbau yang mendunia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 34. Gapura Candi Bentar -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="rumah" data-caption="Gapura Candi Bentar &bull; Bali: Pintu gerbang terbelah dua tanpa atap yang membatasi zona luar dengan halaman suci rumah/puri di Bali, menyimbolkan belahan Gunung Meru yang suci.">
+                    <img src="img/rumah-gapura-candi-bentar.jpg" alt="Gapura Candi Bentar Bali" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-house-chimney text-terracotta mr-1"></i> Rumah Adat &bull; Bali
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Gapura Candi Bentar</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Gerbang terbelah dua tanpa atap lambang pembatas ruang sakral dan profan di Bali.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 35. Rumah Honai -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="rumah" data-caption="Rumah Honai &bull; Lembah Baliem, Papua: Rumah bundar berdinding kayu dan beratap rumbia/jerami rapat tanpa jendela suku Dani, dirancang cerdas untuk menahan hawa dingin pegunungan.">
+                    <img src="img/rumah-honai.jpg" alt="Rumah Honai Papua" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-house-chimney text-terracotta mr-1"></i> Rumah Adat &bull; Papua
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Rumah Honai</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Rumah bundar jerami suku Dani penjaga kehangatan di ketinggian pegunungan Papua.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 36. Rumah Joglo -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="rumah" data-caption="Rumah Joglo &bull; Jawa Tengah: Arsitektur agung Jawa beratap tajug menjulang yang ditopang empat tiang utama (saka guru) di bagian pendapa, lambang keterbukaan dan ketenteraman hidup.">
+                    <img src="img/rumah-joglo.jpg" alt="Rumah Joglo Jawa Tengah" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-house-chimney text-terracotta mr-1"></i> Rumah Adat &bull; Jateng
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Rumah Joglo</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Rumah tradisional Jawa dengan soko guru kokoh dan pendopo agung yang asri.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 37. Rumah Kebaya -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="rumah" data-caption="Rumah Kebaya &bull; DKI Jakarta: Rumah tradisional masyarakat Betawi dengan bentuk atap pelana yang menyerupai lipatan kebaya serta serambi depan (teras) yang luas untuk menyambut tamu.">
+                    <img src="img/rumah-kebaya.jpg" alt="Rumah Kebaya Betawi" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-house-chimney text-terracotta mr-1"></i> Rumah Adat &bull; Betawi
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Rumah Kebaya</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Rumah adat Betawi beratap lipatan kebaya dan teras lapang lambang keakraban.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 38. Rumah Krong Bade -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="rumah" data-caption="Rumah Krong Bade &bull; Aceh: Rumah panggung kayu khas masyarakat Aceh bertangga ganjil dengan pintu masuk rendah mengharuskan tamu menunduk sebagai tanda hormat kepada tuan rumah.">
+                    <img src="img/rumah-krong-bade.jpg" alt="Rumah Krong Bade Aceh" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-house-chimney text-terracotta mr-1"></i> Rumah Adat &bull; Aceh
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Rumah Krong Bade</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Rumah panggung kayu Aceh berukir indah yang menghadap ke arah kiblat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 39. Rumah Lamin -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="rumah" data-caption="Rumah Lamin &bull; Kalimantan Timur: Rumah panjang komunal suku Dayak Kenyah hingga 300 meter yang dihuni puluhan keluarga sekaligus, melambangkan gotong royong dan kekeluargaan erat.">
+                    <img src="img/rumah-lamin.jpg" alt="Rumah Lamin Dayak" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-house-chimney text-terracotta mr-1"></i> Rumah Adat &bull; Kaltim
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Rumah Lamin</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Rumah panggung panjang suku Dayak berornamen naga dan patung totem blontang.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 40. Rumah Limas -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="rumah" data-caption="Rumah Limas &bull; Sumatera Selatan: Rumah panggung beratap limas dengan lantai berundak-undak (kekijing) khas Palembang yang merefleksikan jenjang sosial dan penghormatan tetua.">
+                    <img src="img/rumah-limas.jpg" alt="Rumah Limas Palembang" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-house-chimney text-terracotta mr-1"></i> Rumah Adat &bull; Sumsel
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Rumah Limas</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Rumah panggung bertingkat lantai kekijing dengan ukiran keemasan Palembang.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 41. Rumah Tongkonan -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="rumah" data-caption="Rumah Tongkonan &bull; Tana Toraja, Sulsel: Rumah adat berbentuk haluan perahu menghadap utara dengan deretan tanduk kerbau (kabongo) di tiang depan pembawa prestise keluarga.">
+                    <img src="img/rumah-tongkonan.jpg" alt="Rumah Tongkonan Toraja" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-house-chimney text-terracotta mr-1"></i> Rumah Adat &bull; Toraja
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Rumah Tongkonan</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Arsitektur melengkung perahu suku Toraja berhias ukiran pa'ssura dan tanduk kerbau.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 42. Rumah Walewangko -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="rumah" data-caption="Rumah Walewangko &bull; Sulawesi Utara: Rumah panggung suku Minahasa dengan dua tangga sejajar di bagian kiri dan kanan pintu utama untuk menyambut tamu dan mengusir energi negatif.">
+                    <img src="img/rumah-walewangko.jpg" alt="Rumah Walewangko Minahasa" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-house-chimney text-terracotta mr-1"></i> Rumah Adat &bull; Minahasa
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Rumah Walewangko</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Rumah panggung kayu Minahasa berpintu ganda dan bertangga simetris nan megah.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 43. Rumah Adat Cover -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="rumah" data-caption="Arsitektur Vernakular Nusantara: Jejak kearifan arsitek lokal nenek moyang dalam merancang hunian ramah lingkungan, tahan bencana alam, dan menyatu harmonis dengan kontur alam.">
+                    <img src="img/rumah.jpg" alt="Arsitektur Vernakular Nusantara" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-house-chimney text-terracotta mr-1"></i> Rumah Adat &bull; Nusantara
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Kearifan Vernakular</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Keagungan struktur vernakular ramah alam karya arsitektur pusaka nusantara.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== MAKANAN TRADISIONAL (18 ITEMS) ===== -->
+                <!-- 44. Ayam Betutu -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Ayam Betutu &bull; Bali: Olahan ayam utuh berbalur bumbu base genep lengkap yang dipanggang lambat dalam sekam padi atau daun pisang, menghasilkan tekstur empuk dan pedas gurih mendalam.">
+                    <img src="img/ayam-betutu.jpg" alt="Ayam Betutu Bali" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Bali
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Ayam Betutu</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Ayam panggang rempah khas Bali dengan aroma asap daun pisang yang meresap sempurna.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 45. Bubur Manado -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Bubur Manado &bull; Sulawesi Utara: Bubur beras campur labu kuning, jagung manis, kangkung, bayam, dan kemangi yang disajikan hangat bersama ikan asin krispi dan sambal roa pedas.">
+                    <img src="img/bubur-manado.jpg" alt="Bubur Manado Sulawesi Utara" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Sulut
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Bubur Manado</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Bubur sayuran sarat gizi berpadu sambal roa pedas dan ikan asin renyah khas Manado.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 46. Bubur Pedas -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Bubur Pedas &bull; Sambas, Kalimantan Barat: Bubur khas suku Melayu Sambas terbuat dari beras sangrai tumbuk bersama puluhan rempah dan daun kesum liar beraroma wangi memikat.">
+                    <img src="img/bubur-pedas.jpg" alt="Bubur Pedas Sambas" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Kalbar
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Bubur Pedas Sambas</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Bubur beras sangrai kaya sayuran liar dan aroma daun kesum khas Melayu Sambas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 47. Coto Makassar -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Coto Makassar &bull; Sulawesi Selatan: Sup daging dan jeroan sapi legendaris berkuah kacang tanah kental dengan racikan 40 macam rempah rampah yang disantap bersama ketupat daun pandan.">
+                    <img src="img/coto-makassar.jpg" alt="Coto Makassar" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Sulsel
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Coto Makassar</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Hidangan sup daging berkuah kacang gurih pekat berempah khas Tanah Daeng.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 48. Es Pisang Ijo -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Es Pisang Ijo &bull; Sulawesi Selatan: Pisang raja manis berbalut adonan tepung hijau pandan lembut, disajikan di mangkuk es serut dengan bubur sumsum gurih dan sirup merah manis.">
+                    <img src="img/es-pisang-ijo.jpg" alt="Es Pisang Ijo" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Sulsel
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Es Pisang Ijo</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Dessert manis segar pisang berbalut adonan pandan dengan siraman kuah sumsum gurih.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 49. Gudeg Jogja -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Gudeg &bull; D.I. Yogyakarta: Olahan nangka muda (gori) dimasak berjam-jam dengan santan kental, gula merah aren, dan daun jati dalam kuali tanah liat hingga berwarna cokelat karamel.">
+                    <img src="img/gudeg.jpg" alt="Gudeg Jogja" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Yogyakarta
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Gudeg Yogyakarta</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Kuliner legendaris nangka muda berpadu sambal krecek pedas dan areh santan kental.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 50. Karedok Sunda -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Karedok &bull; Jawa Barat: Salad sayuran mentah segar (mentimun, toge, kol, kacang panjang, kemangi) disiram bumbu kacang tanah ulek kaya kencur, cabai, dan asam jawa yang segar menggoda.">
+                    <img src="img/karedok.jpg" alt="Karedok Sunda" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Jabar
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Karedok Sunda</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Kesegaran sayuran mentah berselimut sambal kacang kencur khas Tatar Parahyangan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 51. Mie Aceh -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Mie Aceh &bull; Aceh: Mie kuning tebal kenyal berbalur saus kari pedas kaya rempah kapulaga dan jintan dengan irisan daging sapi atau kepiting empuk bertabur emping gurih.">
+                    <img src="img/mie-aceh.jpg" alt="Mie Aceh" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Aceh
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Mie Aceh</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Mie kenyal berpadu kuah kari kental pedas rempah istimewa khas Serambi Mekkah.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 52. Nasi Liwet Solo -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Nasi Liwet &bull; Solo, Jawa Tengah: Nasi gurih tanak santan beraroma daun salam dan serai, disajikan pincuk daun pisang dengan sayur labu siam pedas, suwiran opor ayam, dan areh kumut.">
+                    <img src="img/nasi-liwet.jpg" alt="Nasi Liwet Solo" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Solo, Jateng
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Nasi Liwet Solo</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Nasi gurih masak santan bertabur areh kental gurih dan opor ayam suwir khas Solo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 53. Papeda & Ikan Kuah Kuning -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Papeda &bull; Papua & Maluku: Bubur sagu kenyal bening bertekstur lembut yang digulung dengan gata-gata dan disantap bersama sup ikan tongkol kuah kuning berbumbu kunyit asam segar.">
+                    <img src="img/papeda.jpg" alt="Papeda dan Ikan Kuah Kuning" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Papua & Maluku
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Papeda & Kuah Kuning</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Makanan pokok sagu kenyal berteman kuah kuning ikan tongkol segar kaya kunyit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 54. Pempek Palembang -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Pempek &bull; Palembang, Sumatera Selatan: Penganan kenyal gurih dari daging ikan tenggiri dan tepung sagu, digoreng garing lalu dicelup kuah cuko pekat manis pedas beraroma asam jawa.">
+                    <img src="img/pempek.jpg" alt="Pempek Palembang" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Palembang
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Pempek Palembang</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Olahan ikan tenggiri kenyal gurih berpadu siraman kuah cuko manis asam pedas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 55. Pindang Patin -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Pindang Patin &bull; Sumatera Selatan: Sup ikan patin berkuah asam segar dengan rempah serai, kunyit, cabai rawit, potongan nanas segar, dan daun kemangi yang menghangatkan tubuh.">
+                    <img src="img/pindang.jpg" alt="Pindang Patin" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Sumsel
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Pindang Patin</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Sup ikan patin asam pedas nan segar dengan paduan irisan nanas dan daun kemangi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 56. Rendang Minang -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Rendang &bull; Minangkabau, Sumatera Barat: Olahan daging sapi karamelisasi santan kelapa pekat dan rempah herbal yang diaduk perlahan berjam-jam, diakui sebagai salah satu hidangan terlezat di dunia.">
+                    <img src="img/rendang.jpg" alt="Rendang Minangkabau" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Minang, Sumbar
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Rendang Daging</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Karamelisasi santan dan rempah daging sapi legendaris Minang yang diakui dunia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 57. Se'i Sapi -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Se'i Sapi &bull; Nusa Tenggara Timur: Daging sapi asap tradisional yang diawetkan dengan garam dan rempah lalu diasapi lambat di atas bara kayu kosambi, disajikan dengan tumis daun pepaya.">
+                    <img src="img/sei-sapi.jpg" alt="Se'i Sapi NTT" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; NTT
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Se'i Sapi Rote</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Daging sapi asap beraroma kayu kosambi khas Rote dengan cocolan sambal lu'at.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 58. Soto Banjar -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Soto Banjar &bull; Kalimantan Selatan: Soto ayam khas suku Banjar berkuah harum rempah kayu manis, cengkeh, dan kapulaga, disajikan dengan ketupat, perkedel kentang, dan telur bebek rebus.">
+                    <img src="img/soto-banjar.jpg" alt="Soto Banjar" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Kalsel
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Soto Banjar</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Soto ayam harum rempah kayu manis dan kapulaga berpadu perkedel kentang gurih.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 59. Tinutuan Manado -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Tinutuan &bull; Manado, Sulawesi Utara: Bubur sehat khas kawanua berisi campuran labu lilin, ubi jalar, jagung manis pipil, dan aneka sayuran hijau beraroma kemangi yang menggugah selera.">
+                    <img src="img/tinutuan.jpg" alt="Tinutuan Bubur Manado" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Manado
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Tinutuan Manado</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Bubur kebanggaan Manado kaya serat alami jagung, labu, dan sayuran segar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 60. Nasi Tumpeng -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Nasi Tumpeng &bull; Jawa & Bali: Nasi kuning kerucut menjulang melambangkan gunung suci tempat bersemayamnya kebaikan, disajikan dengan tujuh macam lauk-pauk sebagai wujud syukur kepada Tuhan.">
+                    <img src="img/tumpeng.jpg" alt="Nasi Tumpeng Tradisional" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Jawa & Bali
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Nasi Tumpeng Syukur</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Nasi kerucut kuning sarat filosofi rasa syukur keagungan Sang Pencipta alam semesta.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 61. Kuliner Rempah Banner -->
+                <div class="gallery-item group relative h-72 sm:h-80 rounded-2xl md:rounded-3xl overflow-hidden border border-[#E8DEC9] shadow-sm bg-cream-200 image-zoom-container cursor-pointer lightbox-trigger" data-category="makanan" data-caption="Ragam Cita Rasa Nusantara: Perpaduan kekayaan rempah kepulauan nusantara yang melahirkan ribuan variasi hidangan autentik penuh cerita sejarah dan kebersamaan keluarga.">
+                    <img src="img/makanan.png" alt="Ragam Kuliner Nusantara" loading="lazy" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-none">
+                        <span class="self-start bg-white/95 backdrop-blur-sm text-earth text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-utensils text-terracotta mr-1"></i> Kuliner &bull; Nusantara
+                        </span>
+                        <div>
+                            <h3 class="font-display font-bold text-white text-base sm:text-lg">Kekayaan Rempah Nusantara</h3>
+                            <p class="text-white/90 text-xs font-sans line-clamp-2 mt-0.5 leading-relaxed">Eksplorasi rempah dan tradisi hidangan turun-temurun dari Sabang sampai Merauke.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA ke Galeri Lengkap -->
+            <div class="mt-12 text-center">
+                <a href="pages/galeri/index.html" class="inline-flex items-center gap-2 bg-[#231A14] hover:bg-[#382b22] text-white text-xs font-bold tracking-widest uppercase px-8 py-4 rounded-md shadow-md transition-all hover:scale-105">
+                    <span>Kunjungi Halaman Dokumentasi Galeri Lengkap</span>
+                    <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                </a>
             </div>
         </section>
     </main>
+
+    <!-- ================= MODAL LIGHTBOX ================= -->
+    <div id="imageModal" class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-md items-center justify-center p-4 transition-all opacity-0 invisible">
+        <div class="relative max-w-5xl w-full flex flex-col items-center">
+            <button id="modalClose" class="absolute -top-12 right-0 text-white hover:text-amber-400 text-2xl transition-colors p-2" aria-label="Tutup Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="max-h-[80vh] overflow-hidden rounded-2xl border border-white/20 shadow-2xl">
+                <img id="modalImage" src="" alt="" class="max-h-[75vh] w-auto object-contain">
+            </div>
+            <p id="modalCaption" class="mt-4 text-cream-100 text-xs sm:text-sm text-center max-w-2xl px-4 font-medium"></p>
+        </div>
+    </div>
 
     <!-- ================= FOOTER ================= -->
     <footer id="tentang" class="bg-[#231A14] text-cream-100 pt-16 pb-12 border-t border-[#382b22]">

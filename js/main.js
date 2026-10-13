@@ -95,4 +95,34 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
         });
     }
+
+    // 5. Dynamic Category Filter untuk Galeri
+    const filterButtons = document.querySelectorAll('.gallery-filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    if (filterButtons.length > 0 && galleryItems.length > 0) {
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.getAttribute('data-filter');
+
+                // Update Button Active States
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-[#231A14]', 'text-white', 'shadow');
+                    b.classList.add('bg-white', 'text-earth', 'border', 'border-[#E8DEC9]');
+                });
+                btn.classList.add('bg-[#231A14]', 'text-white', 'shadow');
+                btn.classList.remove('bg-white', 'text-earth', 'border', 'border-[#E8DEC9]');
+
+                // Filter Gallery Items
+                galleryItems.forEach(item => {
+                    const itemCat = item.getAttribute('data-category');
+                    if (category === 'all' || itemCat === category) {
+                        item.classList.remove('hidden');
+                        item.classList.add('active');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    }
 });
