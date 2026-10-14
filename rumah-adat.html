@@ -138,8 +138,30 @@
             </div>
         </section>
 
-        <!-- ================= REGION FILTER BAR ================= -->
+        <!-- ================= SEARCH & FILTER SECTION ================= -->
         <section class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pb-8">
+            <!-- Search Bar Row -->
+            <div class="mb-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                <div class="relative flex-1 max-w-md">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-earth-subtle/60">
+                        <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                    </span>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Cari nama rumah adat atau wilayah..." 
+                        class="w-full pl-10 pr-10 py-2.5 bg-white/95 backdrop-blur-sm border border-[#E8DEC9] rounded-xl text-xs sm:text-sm text-earth placeholder-earth-subtle/60 focus:outline-none focus:border-terracotta focus:ring-1 focus:ring-terracotta transition-all shadow-2xs"
+                        autocomplete="off"
+                    >
+                    <button id="clearSearchBtn" class="hidden absolute inset-y-0 right-0 items-center pr-3.5 text-earth-subtle hover:text-terracotta transition-colors text-xs" title="Hapus pencarian">
+                        <i class="fa-solid fa-circle-xmark text-sm"></i>
+                    </button>
+                </div>
+                <div id="searchCounter" class="text-xs font-medium text-earth-subtle sm:text-right">
+                    Menampilkan <span class="font-bold text-terracotta">13</span> dari 13 rumah adat
+                </div>
+            </div>
+
             <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-4 border border-[#E8DEC9] shadow-2xs flex items-center gap-3 overflow-x-auto no-scrollbar">
                 <div class="flex items-center gap-2 text-xs font-bold text-earth pl-2 pr-3 border-r border-cream-300 whitespace-nowrap">
                     <i class="fa-solid fa-sliders text-terracotta"></i>
@@ -489,6 +511,21 @@
                         <i class="fa-solid fa-arrow-turn-down text-terracotta text-[10px] rotate-[-90deg]"></i>
                     </div>
                 </article>
+
+                <!-- Empty State (Saat tidak ada hasil pencarian) -->
+                <div id="noResults" class="hidden col-span-full py-16 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-cream-200 flex items-center justify-center text-earth-subtle text-2xl border border-cream-300">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-earth mb-1">Tidak Ditemukan</h3>
+                    <p class="text-xs text-earth-subtle max-w-md mx-auto">
+                        Tidak ada rumah adat yang cocok dengan kata kunci "<span id="searchKeyword" class="font-semibold text-terracotta"></span>". Coba gunakan kata kunci lain atau pilih filter wilayah "Semua".
+                    </p>
+                    <button id="resetSearchBtn" class="mt-4 px-4 py-2 bg-[#231A14] text-white text-xs font-semibold rounded-lg hover:bg-[#382b22] transition-colors inline-flex items-center gap-2">
+                        <i class="fa-solid fa-rotate-left text-[11px]"></i>
+                        <span>Reset Pencarian & Filter</span>
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -632,7 +669,7 @@
         </div>
     </footer>
 
-    <!-- Interactive Filter Script -->
+    <!-- Interactive Search & Filter Script -->
     <script>
         const mobileBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
@@ -642,9 +679,89 @@
             });
         }
 
+        // Realtime Search and Filter Controller
+        const searchInput = document.getElementById('searchInput');
+        const clearSearchBtn = document.getElementById('clearSearchBtn');
+        const searchCounter = document.getElementById('searchCounter');
+        const noResults = document.getElementById('noResults');
+        const searchKeyword = document.getElementById('searchKeyword');
+        const resetSearchBtn = document.getElementById('resetSearchBtn');
         const houseButtons = document.querySelectorAll('.house-btn');
         const houseCards = document.querySelectorAll('.house-card');
+        const totalCards = houseCards.length;
 
+        let activeRegion = 'all';
+
+        function filterItems() {
+            const query = (searchInput.value || '').trim().toLowerCase();
+            let visibleCount = 0;
+
+            // Toggle clear button
+            if (query.length > 0) {
+                clearSearchBtn.classList.remove('hidden');
+                clearSearchBtn.classList.add('flex');
+            } else {
+                clearSearchBtn.classList.add('hidden');
+                clearSearchBtn.classList.remove('flex');
+            }
+
+            houseCards.forEach(card => {
+                const cardProv = (card.getAttribute('data-prov') || '').toLowerCase();
+                const cardOrigin = (card.getAttribute('data-origin') || '').toLowerCase();
+                const matchesFilter = (activeRegion === 'all') || cardProv.includes(activeRegion.toLowerCase());
+
+                const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+                const badge = card.querySelector('span')?.textContent.toLowerCase() || '';
+                const desc = card.querySelector('p')?.textContent.toLowerCase() || '';
+                const textContent = `${title} ${badge} ${desc} ${cardProv} ${cardOrigin}`;
+
+                const matchesSearch = query === '' || textContent.includes(query);
+
+                if (matchesFilter && matchesSearch) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Update live counter
+            if (searchCounter) {
+                if (query.length > 0 || activeRegion !== 'all') {
+                    searchCounter.innerHTML = `Menampilkan <span class="font-bold text-terracotta">${visibleCount}</span> dari ${totalCards} rumah adat`;
+                } else {
+                    searchCounter.innerHTML = `Menampilkan <span class="font-bold text-terracotta">${totalCards}</span> dari ${totalCards} rumah adat`;
+                }
+            }
+
+            // Empty state toggle
+            if (noResults) {
+                if (visibleCount === 0) {
+                    noResults.classList.remove('hidden');
+                    if (searchKeyword) {
+                        searchKeyword.textContent = query || activeRegion;
+                    }
+                } else {
+                    noResults.classList.add('hidden');
+                }
+            }
+        }
+
+        // Realtime input listener
+        if (searchInput) {
+            searchInput.addEventListener('input', filterItems);
+        }
+
+        // Clear search input button
+        if (clearSearchBtn) {
+            clearSearchBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                searchInput.focus();
+                filterItems();
+            });
+        }
+
+        // Region button filters
         houseButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 houseButtons.forEach(b => {
@@ -654,18 +771,28 @@
                 btn.classList.add('bg-[#231A14]', 'text-white');
                 btn.classList.remove('bg-cream-100', 'text-earth');
 
-                const targetProv = btn.getAttribute('data-prov');
-
-                houseCards.forEach(card => {
-                    const cardProv = card.getAttribute('data-prov') || '';
-                    if (targetProv === 'all' || cardProv.includes(targetProv)) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
+                activeRegion = btn.getAttribute('data-prov') || 'all';
+                filterItems();
             });
         });
+
+        // Reset search and filter button
+        if (resetSearchBtn) {
+            resetSearchBtn.addEventListener('click', () => {
+                if (searchInput) searchInput.value = '';
+                activeRegion = 'all';
+                houseButtons.forEach(b => {
+                    if (b.getAttribute('data-prov') === 'all') {
+                        b.classList.add('bg-[#231A14]', 'text-white');
+                        b.classList.remove('bg-cream-100', 'text-earth');
+                    } else {
+                        b.classList.remove('bg-[#231A14]', 'text-white');
+                        b.classList.add('bg-cream-100', 'text-earth');
+                    }
+                });
+                filterItems();
+            });
+        }
     </script>
     <script src="js/main.js"></script>
 </body>

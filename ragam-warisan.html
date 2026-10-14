@@ -224,37 +224,10 @@
 
             <!-- Search Bar & Filters -->
             <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-[#E8DEC9] mb-8">
-                <div class="flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between">
-                    <!-- Search Input -->
-                    <div class="relative flex-1">
-                        <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-earth-subtle text-sm"></i>
-                        <input 
-                            id="searchInput"
-                            type="text" 
-                            placeholder="Cari warisan budaya, tradisi, seni, atau alat..." 
-                            class="w-full pl-11 pr-4 py-2.5 rounded-xl border border-cream-300 focus:outline-none focus:border-terracotta text-xs md:text-sm bg-cream-50/50"
-                        >
-                    </div>
-
-                    <!-- Filter Dropdown & Button -->
-                    <div class="flex items-center gap-3">
-                        <select id="categorySelect" class="px-4 py-2.5 rounded-xl border border-cream-300 text-xs md:text-sm bg-white focus:outline-none focus:border-terracotta text-earth">
-                            <option value="all">Semua Kategori</option>
-                            <option value="tari">Seni Tari</option>
-                            <option value="musik">Seni Musik</option>
-                            <option value="kriya">Kriya & Tradisi</option>
-                            <option value="kuliner">Kuliner Tradisional</option>
-                            <option value="arsitektur">Arsitektur Adat</option>
-                        </select>
-                        <button class="bg-[#231A14] text-white px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider hover:bg-[#382b22] transition-colors flex items-center gap-2">
-                            <i class="fa-solid fa-sliders"></i>
-                            <span class="hidden sm:inline">Filter</span>
-                        </button>
-                    </div>
-                </div>
+                
 
                 <!-- Filter Category Badges -->
-                <div class="flex flex-wrap gap-2 pt-4 mt-4 border-t border-cream-200">
+                <div class="flex flex-wrap gap-2  border-cream-200">
                     <button class="filter-badge px-4 py-1.5 rounded-full text-xs font-semibold bg-[#231A14] text-white transition-all" data-category="all">
                         Semua Warisan
                     </button>
