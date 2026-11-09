@@ -87,3 +87,12 @@ body {
     visibility: visible;
 }
 
+/* Prevent unwanted text selection caret on UI cards */
+.select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
