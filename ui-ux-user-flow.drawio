@@ -1,0 +1,285 @@
+<mxfile host="app.diagrams.net" modified="2026-10-21T08:20:00.000Z" agent="Antigravity" version="21.6.8" type="device">
+  <diagram id="ui-ux-user-flow-budaya" name="UI-UX User Flow &amp; Wireframe Sitemap">
+    <mxGraphModel dx="1600" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1300" background="#FBF7EE" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ================= HEADER TITLE ================= -->
+        <mxCell id="main_title" value="ALUR PERJALANAN PENGGUNA (UI / UX USER FLOW)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#2B2118;fontFamily=Georgia;" vertex="1" parent="1">
+          <mxGeometry x="400" y="25" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="main_subtitle" value="Sistem Informasi Warisan Budaya Indonesia • Fokus pada Interaksi Layar, Pengalaman Pengguna, &amp; Struktur Tampilan" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#6B5E51;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="400" y="65" width="1200" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- ================= STEP 1: HALAMAN BERANDA ================= -->
+        <mxCell id="sec1" value="1. HALAMAN BERANDA (LANDING SCREEN)" style="swimlane;startSize=35;fillColor=#FFFFFF;strokeColor=#C05621;strokeWidth=2;fontStyle=1;fontColor=#2B2118;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="340" height="1060" as="geometry" />
+        </mxCell>
+
+        <mxCell id="u_enter" value="Pengguna Membuka Web&#xa;(Tampilan Bersih &amp; Hangat)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#231A14;strokeColor=#231A14;fontColor=#FFFFFF;fontStyle=1;fontSize=12;" vertex="1" parent="sec1">
+          <mxGeometry x="70" y="55" width="200" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="u_navbar" value="Header &amp; Navigasi Atas&#xa;• Logo 'Budaya Indonesia'&#xa;• Menu: Beranda | Ragam | Galeri | About&#xa;• Tombol CTA: 'Mulai Jelajah'&#xa;• Tombol Hamburger (Mobile)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDFBF7;strokeColor=#C05621;strokeWidth=1.5;fontColor=#2B2118;align=left;spacingLeft=12;" vertex="1" parent="sec1">
+          <mxGeometry x="25" y="130" width="290" height="85" as="geometry" />
+        </mxCell>
+
+        <mxCell id="u_hero" value="Hero Banner Utama&#xa;• Judul Megah: 'Menjaga Warisan Luhur'&#xa;• Counter: '4.795 Budaya Di Indonesia'&#xa;• Tombol Aksi: 'Jelajah Sekarang'&#xa;• Foto Panorama Nusantara" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4ECE0;strokeColor=#C05621;fontColor=#2B2118;fontStyle=1;align=left;spacingLeft=12;" vertex="1" parent="sec1">
+          <mxGeometry x="25" y="245" width="290" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="u_section_preview" value="Cuplikan Ragam Budaya&#xa;• Ringkasan 4 Pilar Warisan&#xa;• Mengapa Menjaga Budaya Itu Penting&#xa;• Preview Foto &amp; Kutipan Nilai Luhur" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6B5E51;fontColor=#2B2118;align=left;spacingLeft=12;" vertex="1" parent="sec1">
+          <mxGeometry x="25" y="365" width="290" height="75" as="geometry" />
+        </mxCell>
+
+        <mxCell id="u_home_choice" value="Pengguna Memilih Langkah?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#C05621;strokeColor=#9C4215;fontColor=#FFFFFF;fontStyle=1;fontSize=11;" vertex="1" parent="sec1">
+          <mxGeometry x="70" y="475" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="u_to_ragam" value="Klik 'Ragam Warisan'&#xa;atau 'Mulai Jelajah'" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#231A14;strokeColor=#231A14;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="sec1">
+          <mxGeometry x="25" y="590" width="135" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="u_to_galeri" value="Klik Menu&#xa;'Galeri'" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C05621;strokeWidth=1.5;fontColor=#2B2118;fontStyle=1;" vertex="1" parent="sec1">
+          <mxGeometry x="180" y="590" width="135" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="u_to_about" value="Klik Menu 'About'&#xa;(Tentang &amp; Kontak)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4ECE0;strokeColor=#6B5E51;fontColor=#2B2118;" vertex="1" parent="sec1">
+          <mxGeometry x="75" y="670" width="190" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- ================= STEP 2: HUB RAGAM WARISAN ================= -->
+        <mxCell id="sec2" value="2. HUB EKSPLORASI (RAGAM WARISAN)" style="swimlane;startSize=35;fillColor=#FFFFFF;strokeColor=#231A14;strokeWidth=2;fontStyle=1;fontColor=#2B2118;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="410" y="120" width="350" height="1060" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r_header" value="Layar Ragam Warisan&#xa;• Breadcrumb: Beranda / Ragam Warisan&#xa;• Headline: 'Seribu Bentuk. Satu Akar.'&#xa;• Foto Panorama Penari Nusantara" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4ECE0;strokeColor=#C05621;fontColor=#2B2118;fontStyle=1;align=left;spacingLeft=12;" vertex="1" parent="sec2">
+          <mxGeometry x="25" y="130" width="300" height="85" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r_card_grid" value="Pilihan 4 Pilar Budaya (Kartu Interaktif):" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#2B2118;" vertex="1" parent="sec2">
+          <mxGeometry x="25" y="240" width="300" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r_pilar1" value="🎵 Seni Musik &amp; Instrumen&#xa;Gamelan, Angklung, Sasando, Tifa, dll." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C05621;strokeWidth=1.5;fontColor=#2B2118;align=left;spacingLeft=15;" vertex="1" parent="sec2">
+          <mxGeometry x="25" y="270" width="300" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r_pilar2" value="💃 Seni Tari Tradisional&#xa;Tari Kecak, Jaipong, Piring, Saman, dll." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C05621;strokeWidth=1.5;fontColor=#2B2118;align=left;spacingLeft=15;" vertex="1" parent="sec2">
+          <mxGeometry x="25" y="340" width="300" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r_pilar3" value="🏛️ Rumah Adat Nusantara&#xa;Rumah Gadang, Joglo, Tongkonan, Honai, dll." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C05621;strokeWidth=1.5;fontColor=#2B2118;align=left;spacingLeft=15;" vertex="1" parent="sec2">
+          <mxGeometry x="25" y="410" width="300" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r_pilar4" value="🍲 Kuliner Tradisional&#xa;Rendang, Gudeg, Papeda, Coto Makassar, dll." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C05621;strokeWidth=1.5;fontColor=#2B2118;align=left;spacingLeft=15;" vertex="1" parent="sec2">
+          <mxGeometry x="25" y="480" width="300" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r_select" value="Pengguna Memilih Salah Satu Pilar Budaya" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#231A14;strokeColor=#231A14;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="sec2">
+          <mxGeometry x="25" y="580" width="300" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ================= STEP 3: HALAMAN KATALOG & FILTER ================= -->
+        <mxCell id="sec3" value="3. HALAMAN KATALOG &amp; FILTER INTERAKTIF" style="swimlane;startSize=35;fillColor=#FFFFFF;strokeColor=#C05621;strokeWidth=2;fontStyle=1;fontColor=#2B2118;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="790" y="120" width="380" height="1060" as="geometry" />
+        </mxCell>
+
+        <mxCell id="k_top" value="Header Katalog Spesifik&#xa;• Banner Kategori (Foto Suasana Seni)&#xa;• Tag Pill: 'Eksplorasi Warisan Terpilih'&#xa;• Judul &amp; Deskripsi Latar Belakang" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDFBF7;strokeColor=#C05621;strokeWidth=1.5;fontColor=#2B2118;align=left;spacingLeft=12;" vertex="1" parent="sec3">
+          <mxGeometry x="25" y="130" width="330" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="k_toolbar" value="Bilah Kontrol Pengguna (Search &amp; Filter):&#xa;🔍 Kotak Input: 'Cari nama atau daerah...'&#xa;🏷️ Tombol Pill Wilayah:&#xa;   [Semua] [Sumatera] [Jawa] [Bali/NT]&#xa;   [Kalimantan] [Sulawesi] [Papua/Maluku]&#xa;📊 Info Counter: 'Menampilkan X dari Total'" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4ECE0;strokeColor=#C05621;strokeWidth=1.5;fontColor=#2B2118;fontStyle=1;align=left;spacingLeft=12;" vertex="1" parent="sec3">
+          <mxGeometry x="25" y="235" width="330" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="k_card_ui" value="Grid Kartu Budaya (Visual Card):&#xa;• Foto Gambar Budaya (Hover Zoom)&#xa;• Badge Daerah Asal (cth: 'Sumatera Barat')&#xa;• Tombol Ikon Simpan (Bookmark ❤️)&#xa;• Nama Budaya (cth: 'Tari Piring')&#xa;• Cuplikan Cerita Singkat (2 baris)&#xa;• Tautan Aksi: 'Jelajah Sejarah ➔'" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#231A14;strokeWidth=1.5;fontColor=#2B2118;align=left;spacingLeft=12;" vertex="1" parent="sec3">
+          <mxGeometry x="25" y="370" width="330" height="130" as="geometry" />
+        </mxCell>
+
+        <mxCell id="k_user_act" value="Pengguna Mau Melakukan Apa?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#C05621;strokeColor=#9C4215;fontColor=#FFFFFF;fontStyle=1;fontSize=11;" vertex="1" parent="sec3">
+          <mxGeometry x="70" y="530" width="240" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="k_act_filter" value="Ketik Nama / Klik Pill Wilayah:&#xa;Daftar kartu langsung terfilter rapi&#xa;sesuai pencarian &amp; asal daerah" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4ECE0;strokeColor=#6B5E51;fontColor=#2B2118;" vertex="1" parent="sec3">
+          <mxGeometry x="25" y="640" width="330" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="k_act_fav" value="Klik Ikon Bookmark (Favorit):&#xa;Ikon berubah warna terakota terisi&#xa;dengan efek pantulan animasi halus" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDFBF7;strokeColor=#C05621;fontColor=#2B2118;" vertex="1" parent="sec3">
+          <mxGeometry x="25" y="710" width="330" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="k_act_detail" value="Klik 'Jelajah Sejarah' pada Kartu&#xa;untuk Membaca Informasi Lengkap" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#231A14;strokeColor=#231A14;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="sec3">
+          <mxGeometry x="25" y="780" width="330" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ================= STEP 4: HALAMAN DETAIL ARTIKEL ================= -->
+        <mxCell id="sec4" value="4. HALAMAN ARTIKEL DETAIL (DEEP DIVE)" style="swimlane;startSize=35;fillColor=#FFFFFF;strokeColor=#231A14;strokeWidth=2;fontStyle=1;fontColor=#2B2118;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="120" width="360" height="1060" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d_breadcrumb" value="Breadcrumb Navigasi:&#xa;Beranda / Ragam / [Kategori] / [Nama Budaya]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDFBF7;strokeColor=#C05621;fontColor=#2B2118;align=left;spacingLeft=12;" vertex="1" parent="sec4">
+          <mxGeometry x="25" y="130" width="310" height="45" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d_hero" value="Banner Foto Megah Resolusi Tinggi&#xa;• Tampilan Penuh Objek Budaya Asli&#xa;• Badge Lokasi / Provinsi Asal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4ECE0;strokeColor=#C05621;strokeWidth=1.5;fontColor=#2B2118;align=left;spacingLeft=12;" vertex="1" parent="sec4">
+          <mxGeometry x="25" y="200" width="310" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d_content" value="Konten Edukasi &amp; Sejarah:&#xa;📖 Asal-usul &amp; Kisah Sejarah Leluhur&#xa;🏛️ Filosofi Makna Simbolis &amp; Ornamen&#xa;🎭 Fungsi Adat, Ritual, atau Upacara&#xa;🪵 Bahan Pembuatan / Karakteristik Unik" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#231A14;strokeWidth=1.5;fontColor=#2B2118;fontStyle=1;align=left;spacingLeft=12;" vertex="1" parent="sec4">
+          <mxGeometry x="25" y="290" width="310" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d_gallery_sub" value="Galeri Visual &amp; Dokumentasi Terkait:&#xa;Foto-foto pendukung instrumen, gerak tari,&#xa;sudut arsitektur rumah adat, atau hidangan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDFBF7;strokeColor=#6B5E51;fontColor=#2B2118;align=left;spacingLeft=12;" vertex="1" parent="sec4">
+          <mxGeometry x="25" y="415" width="310" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d_back" value="Navigasi Kembali:&#xa;Pengguna klik Breadcrumb atau tombol Kembali&#xa;untuk kembali mengeksplorasi katalog lain" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#231A14;strokeColor=#231A14;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="sec4">
+          <mxGeometry x="25" y="510" width="310" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- ================= STEP 5: GALERI & LIGHTBOX ================= -->
+        <mxCell id="sec5" value="5. PENGALAMAN GALERI FOTO (LIGHTBOX)" style="swimlane;startSize=35;fillColor=#FFFFFF;strokeColor=#C05621;strokeWidth=2;fontStyle=1;fontColor=#2B2118;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1590" y="120" width="370" height="1060" as="geometry" />
+        </mxCell>
+
+        <mxCell id="g_header" value="Halaman Galeri Warisan&#xa;• Koleksi Foto Estetik Dokumentasi Nusantara&#xa;• Tab Filter: Semua | Tari | Musik | Rumah | Makanan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDFBF7;strokeColor=#C05621;strokeWidth=1.5;fontColor=#2B2118;align=left;spacingLeft=12;" vertex="1" parent="sec5">
+          <mxGeometry x="25" y="130" width="320" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="g_click_photo" value="Pengguna Mengeklik Salah Satu Foto&#xa;pada Galeri Masonry / Grid" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#231A14;strokeColor=#231A14;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="sec5">
+          <mxGeometry x="25" y="225" width="320" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="g_modal" value="Tampilan Pop-up Layar Penuh (Lightbox):&#xa;• Latar Belakang Gelap (Backdrop Blur Mewah)&#xa;• Foto Resolusi Tinggi Fokus Utama di Tengah&#xa;• Keterangan Nama Budaya &amp; Cerita Foto&#xa;• Tombol Tutup (X) di Sudut Kanan Atas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4ECE0;strokeColor=#C05621;strokeWidth=2;fontColor=#2B2118;fontStyle=1;align=left;spacingLeft=12;" vertex="1" parent="sec5">
+          <mxGeometry x="25" y="305" width="320" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="g_close_opt" value="Kemudahan Menutup Tampilan Pop-up:&#xa;1. Klik Tombol 'X' (Silang)&#xa;2. Klik Area Gelap di Luar Foto&#xa;3. Tekan Tombol 'Esc' pada Keyboard&#xa;➔ Pengguna Kembali ke Tampilan Galeri" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#231A14;strokeWidth=1.5;fontColor=#2B2118;align=left;spacingLeft=12;" vertex="1" parent="sec5">
+          <mxGeometry x="25" y="445" width="320" height="85" as="geometry" />
+        </mxCell>
+
+        <mxCell id="g_footer" value="Footer Bersama (Semua Halaman):&#xa;• Deskripsi Inisiatif Pelestarian Budaya&#xa;• Tautan Cepat Kategori &amp; Organisasi&#xa;• Tautan Media Sosial (Instagram, WhatsApp)&#xa;• Hak Cipta &amp; Identitas Pengembang" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#231A14;strokeColor=#231A14;fontColor=#FFFFFF;align=left;spacingLeft=12;" vertex="1" parent="sec5">
+          <mxGeometry x="25" y="560" width="320" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- ================= KONEKSI ANTAR PANEL ================= -->
+        <mxCell id="con1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="u_enter" target="u_navbar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="con2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="u_navbar" target="u_hero">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="con3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="u_hero" target="u_section_preview">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="con4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="u_section_preview" target="u_home_choice">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="con5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#C05621;strokeWidth=2;" edge="1" parent="1" source="u_home_choice" target="u_to_ragam">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="con6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#C05621;strokeWidth=2;" edge="1" parent="1" source="u_home_choice" target="u_to_galeri">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Dari Beranda ke Ragam -->
+        <mxCell id="flow_to_ragam" value="Masuk ke Khazanah" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#C05621;strokeWidth=2.5;fontColor=#C05621;fontStyle=1;" edge="1" parent="1" source="u_to_ragam" target="r_header">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="133" y="800" />
+              <mxPoint x="390" y="800" />
+              <mxPoint x="390" y="293" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Dari Ragam ke Pilihan Pilar -->
+        <mxCell id="flow_r1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="r_header" target="r_pilar1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_r_sel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="r_pilar4" target="r_select">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Dari Pilih Pilar ke Layar Katalog -->
+        <mxCell id="flow_to_katalog" value="Buka Katalog Terpilih" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#C05621;strokeWidth=2.5;fontColor=#C05621;fontStyle=1;" edge="1" parent="1" source="r_select" target="k_top">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="585" y="800" />
+              <mxPoint x="770" y="800" />
+              <mxPoint x="770" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Di Dalam Katalog -->
+        <mxCell id="flow_k1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="k_top" target="k_toolbar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_k2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="k_toolbar" target="k_card_ui">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_k3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="k_card_ui" target="k_user_act">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_k4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#C05621;strokeWidth=2;" edge="1" parent="1" source="k_user_act" target="k_act_detail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Dari Katalog ke Halaman Detail -->
+        <mxCell id="flow_to_detail" value="Membaca Detail Lengkap" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2.5;fontColor=#231A14;fontStyle=1;" edge="1" parent="1" source="k_act_detail" target="d_breadcrumb">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="980" y="990" />
+              <mxPoint x="1180" y="990" />
+              <mxPoint x="1180" y="273" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="flow_d1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="d_breadcrumb" target="d_hero">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_d2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="d_hero" target="d_content">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_d3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="d_content" target="d_gallery_sub">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_d4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="d_gallery_sub" target="d_back">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Dari Beranda / Menu ke Galeri -->
+        <mxCell id="flow_to_galeri" value="Buka Galeri Foto" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#C05621;strokeWidth=2.5;fontColor=#C05621;fontStyle=1;" edge="1" parent="1" source="u_to_galeri" target="g_header">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="248" y="900" />
+              <mxPoint x="1570" y="900" />
+              <mxPoint x="1570" y="283" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Alur Di Galeri -->
+        <mxCell id="flow_g1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="g_header" target="g_click_photo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_g2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="g_click_photo" target="g_modal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_g3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="g_modal" target="g_close_opt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_g4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#231A14;strokeWidth=2;" edge="1" parent="1" source="g_close_opt" target="g_footer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

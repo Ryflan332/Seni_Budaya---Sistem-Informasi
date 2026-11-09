@@ -1,0 +1,243 @@
+<mxfile host="app.diagrams.net" agent="Antigravity">
+  <diagram id="flowchart-super-rapi" name="Flowchart Super Rapi &amp; Simetris">
+    <mxGraphModel dx="1911" dy="1050" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1200" background="light-dark(#1E1E1E,#FFFFFF)" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node_start" parent="1" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontSize=13;fontStyle=1;" value="Start" vertex="1">
+          <mxGeometry height="40" width="120" x="980" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="node_utama" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontSize=12;" value="Halaman Utama :&#xa;index.html" vertex="1">
+          <mxGeometry height="50" width="180" x="950" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="node_navbar" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontSize=13;fontStyle=1;" value="Pilihan Navbar" vertex="1">
+          <mxGeometry height="70" width="180" x="950" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="btn_beranda" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontSize=12;" value="Beranda" vertex="1">
+          <mxGeometry height="40" width="160" x="40" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="btn_ragam" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontSize=12;" value="Ragam Warisan" vertex="1">
+          <mxGeometry height="40" width="180" x="600" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="btn_galeri" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontSize=12;" value="Galeri" vertex="1">
+          <mxGeometry height="40" width="160" x="1270" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="btn_tentang" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontSize=12;" value="Tentang" vertex="1">
+          <mxGeometry height="40" width="160" x="1580" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="sub_beranda" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;align=left;spacingLeft=10;" value="Tetap di Halaman Utama / Beranda:&#xa;• Hero Section&#xa;• Statistik Budaya (4.795)&#xa;• Cuplikan Ragam Budaya" vertex="1">
+          <mxGeometry height="75" width="200" x="20" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="page_ragam" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontSize=12;" value="Halaman Ragam Warisan :&#xa;ragam-warisan.html&#xa;(Jelajahi Budaya Kita)" vertex="1">
+          <mxGeometry height="60" width="200" x="590" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="page_galeri" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontSize=12;" value="Halaman Galeri :&#xa;pages/galeri/index.html&#xa;(Koleksi Foto Budaya)" vertex="1">
+          <mxGeometry height="60" width="200" x="1250" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="page_tentang" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=left;spacingLeft=10;" value="Halaman Tentang :&#xa;pages/about/index.html&#xa;• Cerita Visi &amp; Misi&#xa;• Kontak &amp; Media Sosial" vertex="1">
+          <mxGeometry height="75" width="200" x="1560" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="dia_ragam" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontSize=11;" value="Pilihan Kategori Budaya:" vertex="1">
+          <mxGeometry height="65" width="180" x="600" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="act_galeri" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;" value="Klik Salah Satu Foto Budaya" vertex="1">
+          <mxGeometry height="45" width="200" x="1250" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="k_tari" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;" value="Seni Tari :&#xa;seni-tari.html" vertex="1">
+          <mxGeometry height="45" width="180" x="260" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="k_musik" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;" value="Seni Musik :&#xa;seni-musik.html" vertex="1">
+          <mxGeometry height="45" width="180" x="480" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="k_rumah" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;" value="Rumah Adat :&#xa;rumah-adat.html" vertex="1">
+          <mxGeometry height="45" width="180" x="700" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="k_kuliner" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;" value="Kuliner Utama :&#xa;makanan-tradisional.html" vertex="1">
+          <mxGeometry height="45" width="180" x="920" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="det_lightbox" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontSize=11;" value="Pop-up Lightbox (Fullscreen)&#xa;Foto Resolusi Penuh + Keterangan" vertex="1">
+          <mxGeometry height="55" width="230" x="1235" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="card_tari" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=10;" value="Klik Card Tari&#xa;(Jaipong, Piring, Kecak, dll.)" vertex="1">
+          <mxGeometry height="45" width="180" x="260" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="card_musik" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=10;" value="Klik Card Musik&#xa;(Angklung, Serune, Sasando, dll.)" vertex="1">
+          <mxGeometry height="45" width="180" x="480" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="card_rumah" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=10;" value="Klik Card Rumah&#xa;(Gadang, Joglo, Tongkonan, dll.)" vertex="1">
+          <mxGeometry height="45" width="180" x="700" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="card_kuliner" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=10;" value="Klik Card Kuliner&#xa;(Rendang, Gudeg, Papeda, dll.)" vertex="1">
+          <mxGeometry height="45" width="180" x="920" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="det_tari" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=10;" value="Detail Seni Tari :&#xa;pages/seni-tari/detail.html&#xa;(Sejarah, Filosofi &amp; Foto)" vertex="1">
+          <mxGeometry height="55" width="180" x="260" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="det_musik" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=10;" value="Detail Seni Musik :&#xa;pages/seni-musik/detail.html&#xa;(Sejarah, Bahan &amp; Nada)" vertex="1">
+          <mxGeometry height="55" width="180" x="480" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="det_rumah" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=10;" value="Detail Rumah Adat :&#xa;pages/rumah-adat/detail.html&#xa;(Arsitektur &amp; Filosofi)" vertex="1">
+          <mxGeometry height="55" width="180" x="700" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="det_kuliner" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e1e;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=10;" value="Detail Kuliner :&#xa;pages/makanan-tradisional/detail.html&#xa;(Resep, Asal &amp; Filosofi)" vertex="1">
+          <mxGeometry height="55" width="180" x="920" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="e_start" edge="1" parent="1" source="node_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="node_utama">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_utama_nav" edge="1" parent="1" source="node_utama" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="node_navbar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_nav_b" edge="1" parent="1" source="node_navbar" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="btn_beranda">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1040" y="270" />
+              <mxPoint x="120" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_nav_r" edge="1" parent="1" source="node_navbar" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="btn_ragam">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1040" y="270" />
+              <mxPoint x="690" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_nav_g" edge="1" parent="1" source="node_navbar" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="btn_galeri">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1040" y="270" />
+              <mxPoint x="1350" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_nav_t" edge="1" parent="1" source="node_navbar" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="btn_tentang">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1040" y="270" />
+              <mxPoint x="1660" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_b1" edge="1" parent="1" source="btn_beranda" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="sub_beranda">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r1" edge="1" parent="1" source="btn_ragam" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="page_ragam">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_g1" edge="1" parent="1" source="btn_galeri" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="page_galeri">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_t1" edge="1" parent="1" source="btn_tentang" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="page_tentang">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r2" edge="1" parent="1" source="page_ragam" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="dia_ragam">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r_tari" edge="1" parent="1" source="dia_ragam" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="k_tari">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="555" />
+              <mxPoint x="350" y="555" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_r_musik" edge="1" parent="1" source="dia_ragam" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="k_musik">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="555" />
+              <mxPoint x="570" y="555" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_r_rumah" edge="1" parent="1" source="dia_ragam" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="k_rumah">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="555" />
+              <mxPoint x="790" y="555" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_r_kuliner" edge="1" parent="1" source="dia_ragam" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="k_kuliner">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="555" />
+              <mxPoint x="1010" y="555" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_c_tari" edge="1" parent="1" source="k_tari" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="card_tari">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_d_tari" edge="1" parent="1" source="card_tari" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="det_tari">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_c_musik" edge="1" parent="1" source="k_musik" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="card_musik">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_d_musik" edge="1" parent="1" source="card_musik" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="det_musik">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_c_rumah" edge="1" parent="1" source="k_rumah" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="card_rumah">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_d_rumah" edge="1" parent="1" source="card_rumah" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="det_rumah">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_c_kuliner" edge="1" parent="1" source="k_kuliner" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="card_kuliner">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_d_kuliner" edge="1" parent="1" source="card_kuliner" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="det_kuliner">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_g2" edge="1" parent="1" source="page_galeri" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="act_galeri">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_g3" edge="1" parent="1" source="act_galeri" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ffffff;strokeWidth=2;endArrow=classic;" target="det_lightbox">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="loop_tari" edge="1" parent="1" source="det_tari" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#38bdf8;strokeWidth=2;dashed=1;fontColor=#38bdf8;fontSize=9;fontStyle=1;endArrow=classic;labelBackgroundColor=#1e1e1e;" target="k_tari" value="Back / Kembali">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="235" y="772" />
+              <mxPoint x="235" y="597" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="loop_musik" edge="1" parent="1" source="det_musik" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#38bdf8;strokeWidth=2;dashed=1;fontColor=#38bdf8;fontSize=9;fontStyle=1;endArrow=classic;labelBackgroundColor=#1e1e1e;" target="k_musik" value="Back / Kembali">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="455" y="772" />
+              <mxPoint x="455" y="597" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="loop_rumah" edge="1" parent="1" source="det_rumah" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#38bdf8;strokeWidth=2;dashed=1;fontColor=#38bdf8;fontSize=9;fontStyle=1;endArrow=classic;labelBackgroundColor=#1e1e1e;" target="k_rumah" value="Back / Kembali">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="675" y="772" />
+              <mxPoint x="675" y="597" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="loop_kuliner" edge="1" parent="1" source="det_kuliner" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#38bdf8;strokeWidth=2;dashed=1;fontColor=#38bdf8;fontSize=9;fontStyle=1;endArrow=classic;labelBackgroundColor=#1e1e1e;" target="k_kuliner" value="Back / Kembali">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="895" y="772" />
+              <mxPoint x="895" y="597" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="loop_galeri" edge="1" parent="1" source="det_lightbox" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#38bdf8;strokeWidth=2;dashed=1;fontColor=#38bdf8;fontSize=9;fontStyle=1;endArrow=classic;labelBackgroundColor=#1e1e1e;" target="page_galeri" value="Tutup / Back">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1480" y="592" />
+              <mxPoint x="1480" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
